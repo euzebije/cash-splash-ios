@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8106C6B218D47E2F00963219 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106C6B118D47E2F00963219 /* Foundation.framework */; };
+		8106C6B418D47E2F00963219 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106C6B318D47E2F00963219 /* CoreGraphics.framework */; };
+		8106C6B618D47E2F00963219 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106C6B518D47E2F00963219 /* UIKit.framework */; };
+		8106C6BC18D47E2F00963219 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8106C6BA18D47E2F00963219 /* InfoPlist.strings */; };
+		8106C6BE18D47E2F00963219 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106C6BD18D47E2F00963219 /* main.m */; };
+		8106C6C218D47E2F00963219 /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106C6C118D47E2F00963219 /* CSAppDelegate.m */; };
+		8106C6C418D47E2F00963219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8106C6C318D47E2F00963219 /* Images.xcassets */; };
+		8106C6CB18D47E3000963219 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106C6CA18D47E3000963219 /* XCTest.framework */; };
+		8106C6CC18D47E3000963219 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106C6B118D47E2F00963219 /* Foundation.framework */; };
+		8106C6CD18D47E3000963219 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8106C6B518D47E2F00963219 /* UIKit.framework */; };
+		8106C6D518D47E3000963219 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8106C6D318D47E3000963219 /* InfoPlist.strings */; };
+		8106C6D718D47E3000963219 /* CashSplashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106C6D618D47E3000963219 /* CashSplashTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8106C6CE18D47E3000963219 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8106C6A618D47E2F00963219 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8106C6AD18D47E2F00963219;
+			remoteInfo = CashSplash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8106C6AE18D47E2F00963219 /* CashSplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashSplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8106C6B118D47E2F00963219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8106C6B318D47E2F00963219 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8106C6B518D47E2F00963219 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8106C6B918D47E2F00963219 /* CashSplash-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CashSplash-Info.plist"; sourceTree = "<group>"; };
+		8106C6BB18D47E2F00963219 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8106C6BD18D47E2F00963219 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8106C6BF18D47E2F00963219 /* CashSplash-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CashSplash-Prefix.pch"; sourceTree = "<group>"; };
+		8106C6C018D47E2F00963219 /* CSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSAppDelegate.h; sourceTree = "<group>"; };
+		8106C6C118D47E2F00963219 /* CSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSAppDelegate.m; sourceTree = "<group>"; };
+		8106C6C318D47E2F00963219 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8106C6C918D47E3000963219 /* CashSplashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashSplashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8106C6CA18D47E3000963219 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8106C6D218D47E3000963219 /* CashSplashTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CashSplashTests-Info.plist"; sourceTree = "<group>"; };
+		8106C6D418D47E3000963219 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8106C6D618D47E3000963219 /* CashSplashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CashSplashTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8106C6AB18D47E2F00963219 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8106C6B418D47E2F00963219 /* CoreGraphics.framework in Frameworks */,
+				8106C6B618D47E2F00963219 /* UIKit.framework in Frameworks */,
+				8106C6B218D47E2F00963219 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8106C6C618D47E3000963219 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8106C6CB18D47E3000963219 /* XCTest.framework in Frameworks */,
+				8106C6CD18D47E3000963219 /* UIKit.framework in Frameworks */,
+				8106C6CC18D47E3000963219 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8106C6A518D47E2F00963219 = {
+			isa = PBXGroup;
+			children = (
+				8106C6B718D47E2F00963219 /* CashSplash */,
+				8106C6D018D47E3000963219 /* CashSplashTests */,
+				8106C6B018D47E2F00963219 /* Frameworks */,
+				8106C6AF18D47E2F00963219 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8106C6AF18D47E2F00963219 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8106C6AE18D47E2F00963219 /* CashSplash.app */,
+				8106C6C918D47E3000963219 /* CashSplashTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8106C6B018D47E2F00963219 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8106C6B118D47E2F00963219 /* Foundation.framework */,
+				8106C6B318D47E2F00963219 /* CoreGraphics.framework */,
+				8106C6B518D47E2F00963219 /* UIKit.framework */,
+				8106C6CA18D47E3000963219 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8106C6B718D47E2F00963219 /* CashSplash */ = {
+			isa = PBXGroup;
+			children = (
+				8106C6C018D47E2F00963219 /* CSAppDelegate.h */,
+				8106C6C118D47E2F00963219 /* CSAppDelegate.m */,
+				8106C6C318D47E2F00963219 /* Images.xcassets */,
+				8106C6B818D47E2F00963219 /* Supporting Files */,
+			);
+			path = CashSplash;
+			sourceTree = "<group>";
+		};
+		8106C6B818D47E2F00963219 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8106C6B918D47E2F00963219 /* CashSplash-Info.plist */,
+				8106C6BA18D47E2F00963219 /* InfoPlist.strings */,
+				8106C6BD18D47E2F00963219 /* main.m */,
+				8106C6BF18D47E2F00963219 /* CashSplash-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8106C6D018D47E3000963219 /* CashSplashTests */ = {
+			isa = PBXGroup;
+			children = (
+				8106C6D618D47E3000963219 /* CashSplashTests.m */,
+				8106C6D118D47E3000963219 /* Supporting Files */,
+			);
+			path = CashSplashTests;
+			sourceTree = "<group>";
+		};
+		8106C6D118D47E3000963219 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8106C6D218D47E3000963219 /* CashSplashTests-Info.plist */,
+				8106C6D318D47E3000963219 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8106C6AD18D47E2F00963219 /* CashSplash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8106C6DA18D47E3000963219 /* Build configuration list for PBXNativeTarget "CashSplash" */;
+			buildPhases = (
+				8106C6AA18D47E2F00963219 /* Sources */,
+				8106C6AB18D47E2F00963219 /* Frameworks */,
+				8106C6AC18D47E2F00963219 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CashSplash;
+			productName = CashSplash;
+			productReference = 8106C6AE18D47E2F00963219 /* CashSplash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8106C6C818D47E3000963219 /* CashSplashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8106C6DD18D47E3000963219 /* Build configuration list for PBXNativeTarget "CashSplashTests" */;
+			buildPhases = (
+				8106C6C518D47E3000963219 /* Sources */,
+				8106C6C618D47E3000963219 /* Frameworks */,
+				8106C6C718D47E3000963219 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8106C6CF18D47E3000963219 /* PBXTargetDependency */,
+			);
+			name = CashSplashTests;
+			productName = CashSplashTests;
+			productReference = 8106C6C918D47E3000963219 /* CashSplashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8106C6A618D47E2F00963219 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ivan Fabijanovic";
+				TargetAttributes = {
+					8106C6C818D47E3000963219 = {
+						TestTargetID = 8106C6AD18D47E2F00963219;
+					};
+				};
+			};
+			buildConfigurationList = 8106C6A918D47E2F00963219 /* Build configuration list for PBXProject "CashSplash" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8106C6A518D47E2F00963219;
+			productRefGroup = 8106C6AF18D47E2F00963219 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8106C6AD18D47E2F00963219 /* CashSplash */,
+				8106C6C818D47E3000963219 /* CashSplashTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8106C6AC18D47E2F00963219 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8106C6BC18D47E2F00963219 /* InfoPlist.strings in Resources */,
+				8106C6C418D47E2F00963219 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8106C6C718D47E3000963219 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8106C6D518D47E3000963219 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8106C6AA18D47E2F00963219 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8106C6C218D47E2F00963219 /* CSAppDelegate.m in Sources */,
+				8106C6BE18D47E2F00963219 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8106C6C518D47E3000963219 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8106C6D718D47E3000963219 /* CashSplashTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8106C6CF18D47E3000963219 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8106C6AD18D47E2F00963219 /* CashSplash */;
+			targetProxy = 8106C6CE18D47E3000963219 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8106C6BA18D47E2F00963219 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8106C6BB18D47E2F00963219 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8106C6D318D47E3000963219 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8106C6D418D47E3000963219 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8106C6D818D47E3000963219 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8106C6D918D47E3000963219 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8106C6DB18D47E3000963219 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CashSplash/CashSplash-Prefix.pch";
+				INFOPLIST_FILE = "CashSplash/CashSplash-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8106C6DC18D47E3000963219 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CashSplash/CashSplash-Prefix.pch";
+				INFOPLIST_FILE = "CashSplash/CashSplash-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8106C6DE18D47E3000963219 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CashSplash.app/CashSplash";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CashSplash/CashSplash-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CashSplashTests/CashSplashTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8106C6DF18D47E3000963219 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CashSplash.app/CashSplash";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CashSplash/CashSplash-Prefix.pch";
+				INFOPLIST_FILE = "CashSplashTests/CashSplashTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8106C6A918D47E2F00963219 /* Build configuration list for PBXProject "CashSplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8106C6D818D47E3000963219 /* Debug */,
+				8106C6D918D47E3000963219 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8106C6DA18D47E3000963219 /* Build configuration list for PBXNativeTarget "CashSplash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8106C6DB18D47E3000963219 /* Debug */,
+				8106C6DC18D47E3000963219 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8106C6DD18D47E3000963219 /* Build configuration list for PBXNativeTarget "CashSplashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8106C6DE18D47E3000963219 /* Debug */,
+				8106C6DF18D47E3000963219 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8106C6A618D47E2F00963219 /* Project object */;
+}
