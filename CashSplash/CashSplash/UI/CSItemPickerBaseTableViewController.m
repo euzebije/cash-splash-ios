@@ -36,12 +36,11 @@
     return cell;
 }
 
-// Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.dataSource removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 
@@ -58,6 +57,17 @@
     [selectedCell setAccessoryType:UITableViewCellAccessoryCheckmark];
     [selectedCell setSelected:NO animated:YES];
     _selectedCell = selectedCell;
+}
+
+#pragma mark - CSNewItemDelegate
+
+- (void)saveItem:(NSString *)item
+{
+    if (item != nil && item.length > 0) {
+        [self.dataSource addObject:item];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0];
+        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 @end

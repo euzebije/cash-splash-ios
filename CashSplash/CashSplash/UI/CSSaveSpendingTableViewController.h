@@ -20,4 +20,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UITextField *noteTextField;
 
+- (IBAction)noteEditEnd:(id)sender;
 @end

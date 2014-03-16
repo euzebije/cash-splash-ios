@@ -34,6 +34,11 @@
     [self setDate:[NSDate date]];
 }
 
+- (IBAction)noteEditEnd:(id)sender
+{
+    [sender resignFirstResponder];
+}
+
 #pragma mark - UIPickerViewDataSource
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -50,7 +55,7 @@
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return [NSString stringWithFormat:@"%d", row];
+    return [NSString stringWithFormat:@"%ld", (long)row];
 }
 
 #pragma mark - CSDatePickerDelegate

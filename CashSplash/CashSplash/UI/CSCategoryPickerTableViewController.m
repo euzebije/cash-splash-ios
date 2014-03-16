@@ -33,15 +33,4 @@
     controller.textFieldPlaceholder = @"Enter new category name here";
 }
 
-#pragma mark - CSNewItemDelegate
-
-- (void)saveItem:(NSString *)item
-{
-    if (item != nil && item.length > 0) {
-        [self.dataSource addObject:item];
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0];
-        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
-}
-
 @end

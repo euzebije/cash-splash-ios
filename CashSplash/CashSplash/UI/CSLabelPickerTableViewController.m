@@ -24,4 +24,13 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    CSNewItemTableViewController *controller = segue.destinationViewController;
+    controller.delegate = self;
+    controller.navigationTitle = @"Label";
+    controller.sectionTitle = @"New Label";
+    controller.textFieldPlaceholder = @"Enter new label name here";
+}
+
 @end

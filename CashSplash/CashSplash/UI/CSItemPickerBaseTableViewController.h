@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CSNewItemTableViewController.h"
 
-@interface CSItemPickerBaseTableViewController : UITableViewController
+@interface CSItemPickerBaseTableViewController : UITableViewController <CSNewItemDelegate>
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, copy) NSString *item;

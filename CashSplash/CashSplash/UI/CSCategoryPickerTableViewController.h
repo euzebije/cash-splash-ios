@@ -15,7 +15,7 @@
 
 @end
 
-@interface CSCategoryPickerTableViewController : CSItemPickerBaseTableViewController <CSNewItemDelegate>
+@interface CSCategoryPickerTableViewController : CSItemPickerBaseTableViewController
 
 @property (nonatomic, weak) id<CSCategoryPickerDelegate> delegate;
 
