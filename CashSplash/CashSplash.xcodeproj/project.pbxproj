@@ -22,6 +22,11 @@
 		8106C6E518D47F3100963219 /* Storyboard-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8106C6E418D47F3100963219 /* Storyboard-iPhone.storyboard */; };
 		8106C6E818D488E900963219 /* CSSaveSpendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */; };
 		810E44FA18D59E95009B526E /* CSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E44F918D59E95009B526E /* CSDatePickerViewController.m */; };
+		810E44FD18D5A1E9009B526E /* CSLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E44FC18D5A1E9009B526E /* CSLocalDataManager.m */; };
+		810E450318D5AF69009B526E /* CSCategoryPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E450218D5AF69009B526E /* CSCategoryPickerTableViewController.m */; };
+		810E450918D5BB3A009B526E /* CSItemPickerBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E450818D5BB3A009B526E /* CSItemPickerBaseTableViewController.m */; };
+		810E450C18D5BD6B009B526E /* CSLabelPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E450B18D5BD6B009B526E /* CSLabelPickerTableViewController.m */; };
+		818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +61,16 @@
 		8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSaveSpendingTableViewController.m; path = UI/CSSaveSpendingTableViewController.m; sourceTree = "<group>"; };
 		810E44F818D59E95009B526E /* CSDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDatePickerViewController.h; path = UI/CSDatePickerViewController.h; sourceTree = "<group>"; };
 		810E44F918D59E95009B526E /* CSDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDatePickerViewController.m; path = UI/CSDatePickerViewController.m; sourceTree = "<group>"; };
+		810E44FB18D5A1E9009B526E /* CSLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSLocalDataManager.h; path = Data/CSLocalDataManager.h; sourceTree = "<group>"; };
+		810E44FC18D5A1E9009B526E /* CSLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLocalDataManager.m; path = Data/CSLocalDataManager.m; sourceTree = "<group>"; };
+		810E450118D5AF69009B526E /* CSCategoryPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCategoryPickerTableViewController.h; path = UI/CSCategoryPickerTableViewController.h; sourceTree = "<group>"; };
+		810E450218D5AF69009B526E /* CSCategoryPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCategoryPickerTableViewController.m; path = UI/CSCategoryPickerTableViewController.m; sourceTree = "<group>"; };
+		810E450718D5BB3A009B526E /* CSItemPickerBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSItemPickerBaseTableViewController.h; path = UI/CSItemPickerBaseTableViewController.h; sourceTree = "<group>"; };
+		810E450818D5BB3A009B526E /* CSItemPickerBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSItemPickerBaseTableViewController.m; path = UI/CSItemPickerBaseTableViewController.m; sourceTree = "<group>"; };
+		810E450A18D5BD6B009B526E /* CSLabelPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSLabelPickerTableViewController.h; path = UI/CSLabelPickerTableViewController.h; sourceTree = "<group>"; };
+		810E450B18D5BD6B009B526E /* CSLabelPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLabelPickerTableViewController.m; path = UI/CSLabelPickerTableViewController.m; sourceTree = "<group>"; };
+		818F010C18D5C2C60050C24E /* CSNewItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSNewItemTableViewController.h; path = UI/CSNewItemTableViewController.h; sourceTree = "<group>"; };
+		818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSNewItemTableViewController.m; path = UI/CSNewItemTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,8 +199,16 @@
 		810E44EA18D59487009B526E /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				810E450118D5AF69009B526E /* CSCategoryPickerTableViewController.h */,
+				810E450218D5AF69009B526E /* CSCategoryPickerTableViewController.m */,
 				810E44F818D59E95009B526E /* CSDatePickerViewController.h */,
 				810E44F918D59E95009B526E /* CSDatePickerViewController.m */,
+				810E450718D5BB3A009B526E /* CSItemPickerBaseTableViewController.h */,
+				810E450818D5BB3A009B526E /* CSItemPickerBaseTableViewController.m */,
+				810E450A18D5BD6B009B526E /* CSLabelPickerTableViewController.h */,
+				810E450B18D5BD6B009B526E /* CSLabelPickerTableViewController.m */,
+				818F010C18D5C2C60050C24E /* CSNewItemTableViewController.h */,
+				818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */,
 			);
 			name = Pickers;
 			sourceTree = "<group>";
@@ -193,6 +216,8 @@
 		810E44F118D598CA009B526E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				810E44FB18D5A1E9009B526E /* CSLocalDataManager.h */,
+				810E44FC18D5A1E9009B526E /* CSLocalDataManager.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -294,10 +319,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810E450C18D5BD6B009B526E /* CSLabelPickerTableViewController.m in Sources */,
 				8106C6E818D488E900963219 /* CSSaveSpendingTableViewController.m in Sources */,
 				810E44FA18D59E95009B526E /* CSDatePickerViewController.m in Sources */,
+				810E44FD18D5A1E9009B526E /* CSLocalDataManager.m in Sources */,
 				8106C6C218D47E2F00963219 /* CSAppDelegate.m in Sources */,
+				818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */,
+				810E450918D5BB3A009B526E /* CSItemPickerBaseTableViewController.m in Sources */,
 				8106C6BE18D47E2F00963219 /* main.m in Sources */,
+				810E450318D5AF69009B526E /* CSCategoryPickerTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

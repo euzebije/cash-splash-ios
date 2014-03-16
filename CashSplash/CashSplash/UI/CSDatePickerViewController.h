@@ -17,7 +17,7 @@
 @interface CSDatePickerViewController : UIViewController
 
 @property (nonatomic, weak) id<CSDatePickerDelegate> delegate;
-@property (nonatomic, retain) NSDate *date;
+@property (nonatomic, copy) NSDate *date;
 
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 

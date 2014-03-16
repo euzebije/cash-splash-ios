@@ -7,10 +7,11 @@
 //
 
 #import "CSSaveSpendingTableViewController.h"
-#import "CSDatePickerViewController.h"
 
 @implementation CSSaveSpendingTableViewController
 {
+    NSString *_category;
+    NSString *_label;
     NSDate *_date;
 }
 
@@ -60,6 +61,22 @@
     self.dateLabel.text = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
 }
 
+#pragma mark - CSCategoryPickerDelegate
+
+- (void)setCategory:(NSString *)category
+{
+    _category = category;
+    self.categoryLabel.text = category;
+}
+
+#pragma mark - CSLabelPickerDelegate
+
+- (void)setLabel:(NSString *)label
+{
+    _label = label;
+    self.labelLabel.text = label;
+}
+
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -68,6 +85,18 @@
         CSDatePickerViewController *datePickerController = segue.destinationViewController;
         datePickerController.delegate = self;
         datePickerController.date = _date;
+    } else if ([segue.identifier isEqualToString:@"pickCategorySegue"]){
+        UINavigationController *navigationController = segue.destinationViewController;
+        CSCategoryPickerTableViewController *categoryPickerController = (CSCategoryPickerTableViewController *)navigationController.topViewController;
+        categoryPickerController.delegate = self;
+        categoryPickerController.dataSource = [[CSLocalDataManager instance] categories];
+        categoryPickerController.item = _category;
+    } else if ([segue.identifier isEqualToString:@"pickLabelSegue"]){
+        UINavigationController *navigationController = segue.destinationViewController;
+        CSLabelPickerTableViewController *categoryPickerController = (CSLabelPickerTableViewController *)navigationController.topViewController;
+        categoryPickerController.delegate = self;
+        categoryPickerController.dataSource = [[CSLocalDataManager instance] labels];
+        categoryPickerController.item = _label;
     }
 }
 
