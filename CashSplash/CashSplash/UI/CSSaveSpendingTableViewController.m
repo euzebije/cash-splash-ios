@@ -39,6 +39,19 @@
     [sender resignFirstResponder];
 }
 
+- (IBAction)saveTapped:(id)sender
+{
+    CSSpendingModel *model = [[CSSpendingModel alloc] init];
+    model.amount = 0;
+    model.category = _category;
+    model.label = _label;
+    model.timestamp = _date;
+    model.note = self.noteTextField.text;
+    
+    [[CSLocalDataManager instance].spendings addObject:model];
+    [[CSLocalDataManager instance] save];
+}
+
 #pragma mark - UIPickerViewDataSource
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView

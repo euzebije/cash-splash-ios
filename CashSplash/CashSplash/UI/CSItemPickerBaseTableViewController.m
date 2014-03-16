@@ -65,6 +65,7 @@
 {
     if (item != nil && item.length > 0) {
         [self.dataSource addObject:item];
+        [[CSLocalDataManager instance] save];
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.dataSource.count - 1 inSection:0];
         [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }

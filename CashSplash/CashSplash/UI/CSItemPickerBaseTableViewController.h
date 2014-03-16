@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CSNewItemTableViewController.h"
+#import "CSLocalDataManager.h"
 
 @interface CSItemPickerBaseTableViewController : UITableViewController <CSNewItemDelegate>
 

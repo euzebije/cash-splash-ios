@@ -14,5 +14,8 @@
 
 @property (nonatomic, strong) NSMutableArray *categories;
 @property (nonatomic, strong) NSMutableArray *labels;
+@property (nonatomic, strong) NSMutableArray *spendings;
+
+- (void)save;
 
 @end

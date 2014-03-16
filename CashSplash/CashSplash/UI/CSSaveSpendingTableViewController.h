@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CSLocalDataManager.h"
+#import "CSSpendingModel.h"
 #import "CSDatePickerViewController.h"
 #import "CSCategoryPickerTableViewController.h"
 #import "CSLabelPickerTableViewController.h"
@@ -21,4 +22,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *noteTextField;
 
 - (IBAction)noteEditEnd:(id)sender;
+- (IBAction)saveTapped:(id)sender;
+
 @end
