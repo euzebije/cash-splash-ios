@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CSSpendingModel : NSObject <NSCoding>
+@interface CSSpendingModel : NSObject
 
 @property (nonatomic, copy) NSString *id;
 @property (nonatomic, assign) CGFloat amount;
@@ -18,8 +18,5 @@
 @property (nonatomic, copy) NSString *note;
 
 - (instancetype)init;
-- (instancetype)initWithCoder:(NSCoder *)decoder;
-
-- (void)encodeWithCoder:(NSCoder *)encoder;
 
 @end

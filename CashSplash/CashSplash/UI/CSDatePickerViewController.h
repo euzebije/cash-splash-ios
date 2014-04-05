@@ -21,6 +21,4 @@
 
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 
-- (IBAction)doneTapped:(id)sender;
-
 @end

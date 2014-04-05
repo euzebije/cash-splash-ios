@@ -10,26 +10,11 @@
 
 @implementation CSNewItemTableViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    self.navigationItem.title = self.navigationTitle;
-    self.itemTextField.placeholder = self.textFieldPlaceholder;
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
     [self.itemTextField becomeFirstResponder];
-}
-
-#pragma mark - Table view data source
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return self.sectionTitle;
 }
 
 - (IBAction)saveTapped:(id)sender

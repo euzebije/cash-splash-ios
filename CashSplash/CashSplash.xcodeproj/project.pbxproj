@@ -22,11 +22,8 @@
 		8106C6E518D47F3100963219 /* Storyboard-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8106C6E418D47F3100963219 /* Storyboard-iPhone.storyboard */; };
 		8106C6E818D488E900963219 /* CSSaveSpendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */; };
 		810E44FA18D59E95009B526E /* CSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E44F918D59E95009B526E /* CSDatePickerViewController.m */; };
-		810E44FD18D5A1E9009B526E /* CSLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E44FC18D5A1E9009B526E /* CSLocalDataManager.m */; };
-		810E450318D5AF69009B526E /* CSCategoryPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E450218D5AF69009B526E /* CSCategoryPickerTableViewController.m */; };
-		810E450918D5BB3A009B526E /* CSItemPickerBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E450818D5BB3A009B526E /* CSItemPickerBaseTableViewController.m */; };
-		810E450C18D5BD6B009B526E /* CSLabelPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E450B18D5BD6B009B526E /* CSLabelPickerTableViewController.m */; };
 		81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81374DA718D6406C00573148 /* CSSpendingModel.m */; };
+		81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */; };
 		818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -62,16 +59,10 @@
 		8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSaveSpendingTableViewController.m; path = UI/CSSaveSpendingTableViewController.m; sourceTree = "<group>"; };
 		810E44F818D59E95009B526E /* CSDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDatePickerViewController.h; path = UI/CSDatePickerViewController.h; sourceTree = "<group>"; };
 		810E44F918D59E95009B526E /* CSDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDatePickerViewController.m; path = UI/CSDatePickerViewController.m; sourceTree = "<group>"; };
-		810E44FB18D5A1E9009B526E /* CSLocalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSLocalDataManager.h; path = Data/CSLocalDataManager.h; sourceTree = "<group>"; };
-		810E44FC18D5A1E9009B526E /* CSLocalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLocalDataManager.m; path = Data/CSLocalDataManager.m; sourceTree = "<group>"; };
-		810E450118D5AF69009B526E /* CSCategoryPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCategoryPickerTableViewController.h; path = UI/CSCategoryPickerTableViewController.h; sourceTree = "<group>"; };
-		810E450218D5AF69009B526E /* CSCategoryPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCategoryPickerTableViewController.m; path = UI/CSCategoryPickerTableViewController.m; sourceTree = "<group>"; };
-		810E450718D5BB3A009B526E /* CSItemPickerBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSItemPickerBaseTableViewController.h; path = UI/CSItemPickerBaseTableViewController.h; sourceTree = "<group>"; };
-		810E450818D5BB3A009B526E /* CSItemPickerBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSItemPickerBaseTableViewController.m; path = UI/CSItemPickerBaseTableViewController.m; sourceTree = "<group>"; };
-		810E450A18D5BD6B009B526E /* CSLabelPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSLabelPickerTableViewController.h; path = UI/CSLabelPickerTableViewController.h; sourceTree = "<group>"; };
-		810E450B18D5BD6B009B526E /* CSLabelPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLabelPickerTableViewController.m; path = UI/CSLabelPickerTableViewController.m; sourceTree = "<group>"; };
 		81374DA618D6406C00573148 /* CSSpendingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSpendingModel.h; path = Model/CSSpendingModel.h; sourceTree = "<group>"; };
 		81374DA718D6406C00573148 /* CSSpendingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModel.m; path = Model/CSSpendingModel.m; sourceTree = "<group>"; };
+		81636D9918F0755E00E3B72B /* CSTablePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTablePickerViewController.h; path = UI/CSTablePickerViewController.h; sourceTree = "<group>"; };
+		81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTablePickerViewController.m; path = UI/CSTablePickerViewController.m; sourceTree = "<group>"; };
 		818F010C18D5C2C60050C24E /* CSNewItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSNewItemTableViewController.h; path = UI/CSNewItemTableViewController.h; sourceTree = "<group>"; };
 		818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSNewItemTableViewController.m; path = UI/CSNewItemTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,7 +124,6 @@
 		8106C6B718D47E2F00963219 /* CashSplash */ = {
 			isa = PBXGroup;
 			children = (
-				810E44F118D598CA009B526E /* Data */,
 				8106C6E118D47EF400963219 /* Model */,
 				8106C6E018D47EEE00963219 /* UI */,
 				8106C6C018D47E2F00963219 /* CSAppDelegate.h */,
@@ -194,6 +184,7 @@
 		8106C6E918D488EF00963219 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				81636D9C18F07A4300E3B72B /* Data */,
 				810E44EA18D59487009B526E /* Pickers */,
 				8106C6E618D488E900963219 /* CSSaveSpendingTableViewController.h */,
 				8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */,
@@ -204,25 +195,19 @@
 		810E44EA18D59487009B526E /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
-				810E450118D5AF69009B526E /* CSCategoryPickerTableViewController.h */,
-				810E450218D5AF69009B526E /* CSCategoryPickerTableViewController.m */,
 				810E44F818D59E95009B526E /* CSDatePickerViewController.h */,
 				810E44F918D59E95009B526E /* CSDatePickerViewController.m */,
-				810E450718D5BB3A009B526E /* CSItemPickerBaseTableViewController.h */,
-				810E450818D5BB3A009B526E /* CSItemPickerBaseTableViewController.m */,
-				810E450A18D5BD6B009B526E /* CSLabelPickerTableViewController.h */,
-				810E450B18D5BD6B009B526E /* CSLabelPickerTableViewController.m */,
-				818F010C18D5C2C60050C24E /* CSNewItemTableViewController.h */,
-				818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */,
+				81636D9918F0755E00E3B72B /* CSTablePickerViewController.h */,
+				81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */,
 			);
 			name = Pickers;
 			sourceTree = "<group>";
 		};
-		810E44F118D598CA009B526E /* Data */ = {
+		81636D9C18F07A4300E3B72B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				810E44FB18D5A1E9009B526E /* CSLocalDataManager.h */,
-				810E44FC18D5A1E9009B526E /* CSLocalDataManager.m */,
+				818F010C18D5C2C60050C24E /* CSNewItemTableViewController.h */,
+				818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -275,6 +260,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ivan Fabijanovic";
 				TargetAttributes = {
+					8106C6AD18D47E2F00963219 = {
+						DevelopmentTeam = EV533W4H92;
+					};
 					8106C6C818D47E3000963219 = {
 						TestTargetID = 8106C6AD18D47E2F00963219;
 					};
@@ -324,15 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				810E450C18D5BD6B009B526E /* CSLabelPickerTableViewController.m in Sources */,
 				8106C6E818D488E900963219 /* CSSaveSpendingTableViewController.m in Sources */,
 				810E44FA18D59E95009B526E /* CSDatePickerViewController.m in Sources */,
-				810E44FD18D5A1E9009B526E /* CSLocalDataManager.m in Sources */,
 				8106C6C218D47E2F00963219 /* CSAppDelegate.m in Sources */,
 				818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */,
-				810E450918D5BB3A009B526E /* CSItemPickerBaseTableViewController.m in Sources */,
+				81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */,
 				8106C6BE18D47E2F00963219 /* main.m in Sources */,
-				810E450318D5AF69009B526E /* CSCategoryPickerTableViewController.m in Sources */,
 				81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CashSplash/CashSplash-Prefix.pch";
 				INFOPLIST_FILE = "CashSplash/CashSplash-Info.plist";
@@ -466,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CashSplash/CashSplash-Prefix.pch";
 				INFOPLIST_FILE = "CashSplash/CashSplash-Info.plist";

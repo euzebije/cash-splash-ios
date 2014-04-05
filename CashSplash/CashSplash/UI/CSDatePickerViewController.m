@@ -17,12 +17,13 @@
     self.datePicker.date = self.date;
 }
 
-- (IBAction)doneTapped:(id)sender
+- (void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
+    
     if (self.delegate != nil) {
         [self.delegate setDate:self.datePicker.date];
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

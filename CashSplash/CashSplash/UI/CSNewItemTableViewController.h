@@ -10,17 +10,13 @@
 
 @protocol CSNewItemDelegate <NSObject>
 
-- (void)saveItem:(NSString *)item;
+- (void)saveItem:(id)item;
 
 @end
 
 @interface CSNewItemTableViewController : UITableViewController
 
 @property (nonatomic, weak) id<CSNewItemDelegate> delegate;
-
-@property (nonatomic, copy) NSString *navigationTitle;
-@property (nonatomic, copy) NSString *sectionTitle;
-@property (nonatomic, copy) NSString *textFieldPlaceholder;
 
 @property (weak, nonatomic) IBOutlet UITextField *itemTextField;
 

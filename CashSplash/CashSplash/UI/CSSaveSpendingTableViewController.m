@@ -8,6 +8,9 @@
 
 #import "CSSaveSpendingTableViewController.h"
 
+#define kCategoryIdentifier @"category"
+#define kLabelIdentifier @"label"
+
 @implementation CSSaveSpendingTableViewController
 {
     NSString *_category;
@@ -41,15 +44,7 @@
 
 - (IBAction)saveTapped:(id)sender
 {
-    CSSpendingModel *model = [[CSSpendingModel alloc] init];
-    model.amount = 0;
-    model.category = _category;
-    model.label = _label;
-    model.timestamp = _date;
-    model.note = self.noteTextField.text;
-    
-    [[CSLocalDataManager instance].spendings addObject:model];
-    [[CSLocalDataManager instance] save];
+
 }
 
 #pragma mark - UIPickerViewDataSource
@@ -71,28 +66,29 @@
     return [NSString stringWithFormat:@"%ld", (long)row];
 }
 
+#pragma mark - CSTablePickerDelegate
+- (NSString *)tablePicker:(CSTablePickerViewController *)tablePicker displayForItem:(id)item
+{
+    return (NSString *)item;
+}
+
+- (void)tablePicker:(CSTablePickerViewController *)tablePicker didPickValue:(id)value
+{
+    if ([tablePicker.identifier isEqualToString:kCategoryIdentifier]) {
+        _category = value;
+        self.categoryLabel.text = _category;
+    } else if ([tablePicker.identifier isEqualToString:kLabelIdentifier]) {
+        _label = value;
+        self.labelLabel.text = _label;
+    }
+}
+
 #pragma mark - CSDatePickerDelegate
 
 - (void)setDate:(NSDate *)date
 {
     _date = date;
     self.dateLabel.text = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
-}
-
-#pragma mark - CSCategoryPickerDelegate
-
-- (void)setCategory:(NSString *)category
-{
-    _category = category;
-    self.categoryLabel.text = category;
-}
-
-#pragma mark - CSLabelPickerDelegate
-
-- (void)setLabel:(NSString *)label
-{
-    _label = label;
-    self.labelLabel.text = label;
 }
 
 #pragma mark - Segue
@@ -104,17 +100,19 @@
         datePickerController.delegate = self;
         datePickerController.date = _date;
     } else if ([segue.identifier isEqualToString:@"pickCategorySegue"]){
-        UINavigationController *navigationController = segue.destinationViewController;
-        CSCategoryPickerTableViewController *categoryPickerController = (CSCategoryPickerTableViewController *)navigationController.topViewController;
+        CSTablePickerViewController *categoryPickerController = segue.destinationViewController;
         categoryPickerController.delegate = self;
-        categoryPickerController.dataSource = [[CSLocalDataManager instance] categories];
-        categoryPickerController.item = _category;
+        categoryPickerController.dataSource = [NSMutableArray array];
+        categoryPickerController.selected = @"";
+        categoryPickerController.identifier = kCategoryIdentifier;
+        categoryPickerController.canAddItems = YES;
     } else if ([segue.identifier isEqualToString:@"pickLabelSegue"]){
-        UINavigationController *navigationController = segue.destinationViewController;
-        CSLabelPickerTableViewController *categoryPickerController = (CSLabelPickerTableViewController *)navigationController.topViewController;
-        categoryPickerController.delegate = self;
-        categoryPickerController.dataSource = [[CSLocalDataManager instance] labels];
-        categoryPickerController.item = _label;
+        CSTablePickerViewController *labelPickerController = segue.destinationViewController;
+        labelPickerController.delegate = self;
+        labelPickerController.dataSource = [NSMutableArray array];
+        labelPickerController.selected = @"";
+        labelPickerController.identifier = kLabelIdentifier;
+        labelPickerController.canAddItems = YES;
     }
 }
 

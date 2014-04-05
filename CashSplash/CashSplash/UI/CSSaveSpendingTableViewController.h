@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CSLocalDataManager.h"
-#import "CSSpendingModel.h"
-#import "CSDatePickerViewController.h"
-#import "CSCategoryPickerTableViewController.h"
-#import "CSLabelPickerTableViewController.h"
 
-@interface CSSaveSpendingTableViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate, CSDatePickerDelegate, CSCategoryPickerDelegate, CSLabelPickerDelegate>
+#import "CSTablePickerViewController.h"
+#import "CSDatePickerViewController.h"
+
+@interface CSSaveSpendingTableViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate, CSTablePickerDelegate, CSDatePickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIPickerView *amountPicker;
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
