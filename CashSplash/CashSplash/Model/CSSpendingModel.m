@@ -8,7 +8,7 @@
 
 #import "CSSpendingModel.h"
 
-#define kIdKey          @"Id"
+#define kKeyKey         @"Id"
 #define kAmountKey      @"Amount"
 #define kCategoryKey    @"Category"
 #define kLabelKey       @"Label"
@@ -21,7 +21,7 @@
 {
     self = [super init];
     if (self) {
-        self.id = [[NSUUID UUID] UUIDString];
+        self.key = [[NSUUID UUID] UUIDString];
     }
     return self;
 }

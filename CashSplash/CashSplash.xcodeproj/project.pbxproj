@@ -22,6 +22,11 @@
 		8106C6E518D47F3100963219 /* Storyboard-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8106C6E418D47F3100963219 /* Storyboard-iPhone.storyboard */; };
 		8106C6E818D488E900963219 /* CSSaveSpendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */; };
 		810E44FA18D59E95009B526E /* CSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E44F918D59E95009B526E /* CSDatePickerViewController.m */; };
+		812C43FF19079EA000FAF848 /* CSSpendingModelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C43FE19079EA000FAF848 /* CSSpendingModelRepository.m */; };
+		812C440219079FCD00FAF848 /* CSRepositoryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C440119079FCD00FAF848 /* CSRepositoryFactory.m */; };
+		812C44051907A05100FAF848 /* CSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44041907A05100FAF848 /* CSDataManager.m */; };
+		812C44081907A11F00FAF848 /* CSSQLiteRepositoryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44071907A11F00FAF848 /* CSSQLiteRepositoryFactory.m */; };
+		812C440B1907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C440A1907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.m */; };
 		81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81374DA718D6406C00573148 /* CSSpendingModel.m */; };
 		81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */; };
 		818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */; };
@@ -59,6 +64,16 @@
 		8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSaveSpendingTableViewController.m; path = UI/CSSaveSpendingTableViewController.m; sourceTree = "<group>"; };
 		810E44F818D59E95009B526E /* CSDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDatePickerViewController.h; path = UI/CSDatePickerViewController.h; sourceTree = "<group>"; };
 		810E44F918D59E95009B526E /* CSDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDatePickerViewController.m; path = UI/CSDatePickerViewController.m; sourceTree = "<group>"; };
+		812C43FD19079EA000FAF848 /* CSSpendingModelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSpendingModelRepository.h; path = Data/Interface/CSSpendingModelRepository.h; sourceTree = "<group>"; };
+		812C43FE19079EA000FAF848 /* CSSpendingModelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModelRepository.m; path = Data/Interface/CSSpendingModelRepository.m; sourceTree = "<group>"; };
+		812C440019079FCD00FAF848 /* CSRepositoryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSRepositoryFactory.h; path = Data/Interface/CSRepositoryFactory.h; sourceTree = "<group>"; };
+		812C440119079FCD00FAF848 /* CSRepositoryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSRepositoryFactory.m; path = Data/Interface/CSRepositoryFactory.m; sourceTree = "<group>"; };
+		812C44031907A05100FAF848 /* CSDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataManager.h; path = Data/CSDataManager.h; sourceTree = "<group>"; };
+		812C44041907A05100FAF848 /* CSDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataManager.m; path = Data/CSDataManager.m; sourceTree = "<group>"; };
+		812C44061907A11F00FAF848 /* CSSQLiteRepositoryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSQLiteRepositoryFactory.h; path = Data/SQLite/CSSQLiteRepositoryFactory.h; sourceTree = "<group>"; };
+		812C44071907A11F00FAF848 /* CSSQLiteRepositoryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSQLiteRepositoryFactory.m; path = Data/SQLite/CSSQLiteRepositoryFactory.m; sourceTree = "<group>"; };
+		812C44091907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSQLiteSpendingModelRepository.h; path = Data/SQLite/CSSQLiteSpendingModelRepository.h; sourceTree = "<group>"; };
+		812C440A1907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSQLiteSpendingModelRepository.m; path = Data/SQLite/CSSQLiteSpendingModelRepository.m; sourceTree = "<group>"; };
 		81374DA618D6406C00573148 /* CSSpendingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSpendingModel.h; path = Model/CSSpendingModel.h; sourceTree = "<group>"; };
 		81374DA718D6406C00573148 /* CSSpendingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModel.m; path = Model/CSSpendingModel.m; sourceTree = "<group>"; };
 		81636D9918F0755E00E3B72B /* CSTablePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTablePickerViewController.h; path = UI/CSTablePickerViewController.h; sourceTree = "<group>"; };
@@ -124,6 +139,7 @@
 		8106C6B718D47E2F00963219 /* CashSplash */ = {
 			isa = PBXGroup;
 			children = (
+				812C43FA19079E1100FAF848 /* Data */,
 				8106C6E118D47EF400963219 /* Model */,
 				8106C6E018D47EEE00963219 /* UI */,
 				8106C6C018D47E2F00963219 /* CSAppDelegate.h */,
@@ -201,6 +217,39 @@
 				81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */,
 			);
 			name = Pickers;
+			sourceTree = "<group>";
+		};
+		812C43FA19079E1100FAF848 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				812C43FC19079E7400FAF848 /* Interface */,
+				812C43FB19079E5A00FAF848 /* SQLite */,
+				812C44031907A05100FAF848 /* CSDataManager.h */,
+				812C44041907A05100FAF848 /* CSDataManager.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		812C43FB19079E5A00FAF848 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				812C44061907A11F00FAF848 /* CSSQLiteRepositoryFactory.h */,
+				812C44071907A11F00FAF848 /* CSSQLiteRepositoryFactory.m */,
+				812C44091907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.h */,
+				812C440A1907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.m */,
+			);
+			name = SQLite;
+			sourceTree = "<group>";
+		};
+		812C43FC19079E7400FAF848 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				812C440019079FCD00FAF848 /* CSRepositoryFactory.h */,
+				812C440119079FCD00FAF848 /* CSRepositoryFactory.m */,
+				812C43FD19079EA000FAF848 /* CSSpendingModelRepository.h */,
+				812C43FE19079EA000FAF848 /* CSSpendingModelRepository.m */,
+			);
+			name = Interface;
 			sourceTree = "<group>";
 		};
 		81636D9C18F07A4300E3B72B /* Data */ = {
@@ -313,12 +362,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8106C6E818D488E900963219 /* CSSaveSpendingTableViewController.m in Sources */,
+				812C440219079FCD00FAF848 /* CSRepositoryFactory.m in Sources */,
 				810E44FA18D59E95009B526E /* CSDatePickerViewController.m in Sources */,
+				812C440B1907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.m in Sources */,
 				8106C6C218D47E2F00963219 /* CSAppDelegate.m in Sources */,
+				812C44081907A11F00FAF848 /* CSSQLiteRepositoryFactory.m in Sources */,
 				818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */,
 				81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */,
+				812C43FF19079EA000FAF848 /* CSSpendingModelRepository.m in Sources */,
 				8106C6BE18D47E2F00963219 /* main.m in Sources */,
 				81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */,
+				812C44051907A05100FAF848 /* CSDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
