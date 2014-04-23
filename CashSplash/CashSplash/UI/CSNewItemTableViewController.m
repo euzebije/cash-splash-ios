@@ -19,9 +19,11 @@
 
 - (IBAction)saveTapped:(id)sender
 {
-    if (self.delegate != nil) {
+    if (self.delegate != nil)
+    {
         [self.delegate saveItem:self.itemTextField.text];
     }
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

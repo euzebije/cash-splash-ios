@@ -11,15 +11,15 @@
 #import "CSTablePickerViewController.h"
 #import "CSDatePickerViewController.h"
 
-@interface CSSaveSpendingTableViewController : UITableViewController <UIPickerViewDataSource, UIPickerViewDelegate, CSTablePickerDelegate, CSDatePickerDelegate>
+@interface CSSaveSpendingTableViewController : UITableViewController <CSTablePickerDelegate, CSDatePickerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIPickerView *amountPicker;
+@property (weak, nonatomic) IBOutlet UITextField *amountTextField;
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *labelLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UITextField *noteTextField;
 
-- (IBAction)noteEditEnd:(id)sender;
+- (IBAction)editEnd:(id)sender;
 - (IBAction)saveTapped:(id)sender;
 
 @end

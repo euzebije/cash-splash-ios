@@ -46,6 +46,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="editEnd:" destination="bfU-5Q-De8" eventType="editingDidEndOnExit" id="UP9-c5-3hI"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -148,7 +151,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
-                                                        <action selector="noteEditEnd:" destination="bfU-5Q-De8" eventType="editingDidEndOnExit" id="NOb-MA-QhH"/>
+                                                        <action selector="editEnd:" destination="bfU-5Q-De8" eventType="editingDidEndOnExit" id="YIZ-3F-OLA"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -163,10 +166,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Spend" id="wJI-27-2q9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Du1-Kr-Q48"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Du1-Kr-Q48">
+                            <connections>
+                                <action selector="saveTapped:" destination="bfU-5Q-De8" id="TQs-02-RI1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <keyCommands/>
                     <connections>
+                        <outlet property="amountTextField" destination="bs2-gl-adA" id="WA0-4E-Oim"/>
                         <outlet property="categoryLabel" destination="TAr-BC-Paf" id="bgc-iO-7ja"/>
                         <outlet property="dateLabel" destination="J9U-qK-8n8" id="xho-NE-cx4"/>
                         <outlet property="labelLabel" destination="cY1-R8-SKV" id="NH3-UI-bYK"/>

@@ -21,7 +21,8 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
     }
     return self;
@@ -31,13 +32,10 @@
 {
     [super viewDidLoad];
     
-    self.amountPicker.dataSource = self;
-    self.amountPicker.delegate = self;
-    
     [self setDate:[NSDate date]];
 }
 
-- (IBAction)noteEditEnd:(id)sender
+- (IBAction)editEnd:(id)sender
 {
     [sender resignFirstResponder];
 }
@@ -45,25 +43,6 @@
 - (IBAction)saveTapped:(id)sender
 {
 
-}
-
-#pragma mark - UIPickerViewDataSource
-
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    return 4;
-}
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    return 10;
-}
-
-#pragma mark - UIPickerViewDelegate
-
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return [NSString stringWithFormat:@"%ld", (long)row];
 }
 
 #pragma mark - CSTablePickerDelegate
@@ -74,10 +53,13 @@
 
 - (void)tablePicker:(CSTablePickerViewController *)tablePicker didPickValue:(id)value
 {
-    if ([tablePicker.identifier isEqualToString:kCategoryIdentifier]) {
+    if ([tablePicker.identifier isEqualToString:kCategoryIdentifier])
+    {
         _category = value;
         self.categoryLabel.text = _category;
-    } else if ([tablePicker.identifier isEqualToString:kLabelIdentifier]) {
+    }
+    else if ([tablePicker.identifier isEqualToString:kLabelIdentifier])
+    {
         _label = value;
         self.labelLabel.text = _label;
     }
@@ -95,18 +77,26 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"pickDateSegue"]) {
+    [self.amountTextField resignFirstResponder];
+    [self.noteTextField resignFirstResponder];
+    
+    if ([segue.identifier isEqualToString:@"pickDateSegue"])
+    {
         CSDatePickerViewController *datePickerController = segue.destinationViewController;
         datePickerController.delegate = self;
         datePickerController.date = _date;
-    } else if ([segue.identifier isEqualToString:@"pickCategorySegue"]){
+    }
+    else if ([segue.identifier isEqualToString:@"pickCategorySegue"])
+    {
         CSTablePickerViewController *categoryPickerController = segue.destinationViewController;
         categoryPickerController.delegate = self;
         categoryPickerController.dataSource = [NSMutableArray array];
         categoryPickerController.selected = @"";
         categoryPickerController.identifier = kCategoryIdentifier;
         categoryPickerController.canAddItems = YES;
-    } else if ([segue.identifier isEqualToString:@"pickLabelSegue"]){
+    }
+    else if ([segue.identifier isEqualToString:@"pickLabelSegue"])
+    {
         CSTablePickerViewController *labelPickerController = segue.destinationViewController;
         labelPickerController.delegate = self;
         labelPickerController.dataSource = [NSMutableArray array];

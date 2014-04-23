@@ -19,7 +19,8 @@
 {
     [super viewDidLoad];
     
-    if (!self.canAddItems) {
+    if (!self.canAddItems)
+    {
         self.navigationItem.rightBarButtonItem = nil;
     }
 }
@@ -51,10 +52,13 @@
     id item = [self.dataSource objectAtIndex:indexPath.row];
     NSString *text = [self.delegate tablePicker:self displayForItem:item];
     cell.textLabel.text = text;
-    if (self.selected == item) {
+    if (self.selected == item)
+    {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         _selectedCell = cell;
-    } else {
+    }
+    else
+    {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     
@@ -63,7 +67,8 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
         [self.dataSource removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
@@ -74,7 +79,8 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
-    if (_selectedCell == selectedCell) {
+    if (_selectedCell == selectedCell)
+    {
         return;
     }
     
@@ -95,7 +101,8 @@
 
 - (void)saveItem:(id)item
 {
-    if (item != nil) {
+    if (item != nil)
+    {
         [self.dataSource addObject:item];
         NSInteger row = MAX(0, self.dataSource.count - 1);
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
