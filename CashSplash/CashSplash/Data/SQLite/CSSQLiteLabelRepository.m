@@ -1,14 +1,14 @@
 //
-//  CSSQLiteSpendingModelRepository.m
+//  CSSQLiteLabelRepository.m
 //  CashSplash
 //
 //  Created by Ivan Fabijanovic on 23/04/14.
 //  Copyright (c) 2014 Ivan Fabijanovic. All rights reserved.
 //
 
-#import "CSSQLiteSpendingModelRepository.h"
+#import "CSSQLiteLabelRepository.h"
 
-@implementation CSSQLiteSpendingModelRepository
+@implementation CSSQLiteLabelRepository
 {
     sqlite3 *_database;
 }

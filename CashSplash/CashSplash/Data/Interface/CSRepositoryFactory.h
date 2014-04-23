@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @class CSSpendingModelRepository;
+@class CSCategoryRepository;
+@class CSLabelRepository;
 
 @interface CSRepositoryFactory : NSObject
 
 - (instancetype)init;
 
 - (CSSpendingModelRepository *)createSpendingModelRepository;
+- (CSCategoryRepository *)createCategoryRepository;
+- (CSLabelRepository *)createLabelRepository;
 
 @end

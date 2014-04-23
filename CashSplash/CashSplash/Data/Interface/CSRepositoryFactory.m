@@ -9,6 +9,8 @@
 #import "CSRepositoryFactory.h"
 
 #import "CSSpendingModelRepository.h"
+#import "CSCategoryRepository.h"
+#import "CSLabelRepository.h"
 
 @implementation CSRepositoryFactory
 
@@ -29,6 +31,16 @@
 - (CSSpendingModelRepository *)createSpendingModelRepository
 {
     return [[CSSpendingModelRepository alloc] init];
+}
+
+- (CSCategoryRepository *)createCategoryRepository
+{
+    return [[CSCategoryRepository alloc] init];
+}
+
+- (CSLabelRepository *)createLabelRepository
+{
+    return [[CSLabelRepository alloc] init];
 }
 
 @end

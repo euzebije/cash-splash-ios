@@ -27,6 +27,11 @@
 		812C44051907A05100FAF848 /* CSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44041907A05100FAF848 /* CSDataManager.m */; };
 		812C44081907A11F00FAF848 /* CSSQLiteRepositoryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44071907A11F00FAF848 /* CSSQLiteRepositoryFactory.m */; };
 		812C440B1907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C440A1907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.m */; };
+		812C440D1907A26A00FAF848 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 812C440C1907A26A00FAF848 /* libsqlite3.dylib */; };
+		812C44101907AF6E00FAF848 /* CSCategoryRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C440F1907AF6E00FAF848 /* CSCategoryRepository.m */; };
+		812C44131907AFA300FAF848 /* CSLabelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44121907AFA300FAF848 /* CSLabelRepository.m */; };
+		812C44161907B14C00FAF848 /* CSSQLiteCategoryRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44151907B14C00FAF848 /* CSSQLiteCategoryRepository.m */; };
+		812C44191907B18000FAF848 /* CSSQLiteLabelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44181907B18000FAF848 /* CSSQLiteLabelRepository.m */; };
 		81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81374DA718D6406C00573148 /* CSSpendingModel.m */; };
 		81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */; };
 		818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */; };
@@ -74,6 +79,15 @@
 		812C44071907A11F00FAF848 /* CSSQLiteRepositoryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSQLiteRepositoryFactory.m; path = Data/SQLite/CSSQLiteRepositoryFactory.m; sourceTree = "<group>"; };
 		812C44091907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSQLiteSpendingModelRepository.h; path = Data/SQLite/CSSQLiteSpendingModelRepository.h; sourceTree = "<group>"; };
 		812C440A1907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSQLiteSpendingModelRepository.m; path = Data/SQLite/CSSQLiteSpendingModelRepository.m; sourceTree = "<group>"; };
+		812C440C1907A26A00FAF848 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		812C440E1907AF6E00FAF848 /* CSCategoryRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCategoryRepository.h; path = Data/Interface/CSCategoryRepository.h; sourceTree = "<group>"; };
+		812C440F1907AF6E00FAF848 /* CSCategoryRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCategoryRepository.m; path = Data/Interface/CSCategoryRepository.m; sourceTree = "<group>"; };
+		812C44111907AFA300FAF848 /* CSLabelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSLabelRepository.h; path = Data/Interface/CSLabelRepository.h; sourceTree = "<group>"; };
+		812C44121907AFA300FAF848 /* CSLabelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLabelRepository.m; path = Data/Interface/CSLabelRepository.m; sourceTree = "<group>"; };
+		812C44141907B14C00FAF848 /* CSSQLiteCategoryRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSQLiteCategoryRepository.h; path = Data/SQLite/CSSQLiteCategoryRepository.h; sourceTree = "<group>"; };
+		812C44151907B14C00FAF848 /* CSSQLiteCategoryRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSQLiteCategoryRepository.m; path = Data/SQLite/CSSQLiteCategoryRepository.m; sourceTree = "<group>"; };
+		812C44171907B18000FAF848 /* CSSQLiteLabelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSQLiteLabelRepository.h; path = Data/SQLite/CSSQLiteLabelRepository.h; sourceTree = "<group>"; };
+		812C44181907B18000FAF848 /* CSSQLiteLabelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSQLiteLabelRepository.m; path = Data/SQLite/CSSQLiteLabelRepository.m; sourceTree = "<group>"; };
 		81374DA618D6406C00573148 /* CSSpendingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSpendingModel.h; path = Model/CSSpendingModel.h; sourceTree = "<group>"; };
 		81374DA718D6406C00573148 /* CSSpendingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModel.m; path = Model/CSSpendingModel.m; sourceTree = "<group>"; };
 		81636D9918F0755E00E3B72B /* CSTablePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTablePickerViewController.h; path = UI/CSTablePickerViewController.h; sourceTree = "<group>"; };
@@ -87,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812C440D1907A26A00FAF848 /* libsqlite3.dylib in Frameworks */,
 				8106C6B418D47E2F00963219 /* CoreGraphics.framework in Frameworks */,
 				8106C6B618D47E2F00963219 /* UIKit.framework in Frameworks */,
 				8106C6B218D47E2F00963219 /* Foundation.framework in Frameworks */,
@@ -128,6 +143,7 @@
 		8106C6B018D47E2F00963219 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				812C440C1907A26A00FAF848 /* libsqlite3.dylib */,
 				8106C6B118D47E2F00963219 /* Foundation.framework */,
 				8106C6B318D47E2F00963219 /* CoreGraphics.framework */,
 				8106C6B518D47E2F00963219 /* UIKit.framework */,
@@ -233,6 +249,10 @@
 		812C43FB19079E5A00FAF848 /* SQLite */ = {
 			isa = PBXGroup;
 			children = (
+				812C44141907B14C00FAF848 /* CSSQLiteCategoryRepository.h */,
+				812C44151907B14C00FAF848 /* CSSQLiteCategoryRepository.m */,
+				812C44171907B18000FAF848 /* CSSQLiteLabelRepository.h */,
+				812C44181907B18000FAF848 /* CSSQLiteLabelRepository.m */,
 				812C44061907A11F00FAF848 /* CSSQLiteRepositoryFactory.h */,
 				812C44071907A11F00FAF848 /* CSSQLiteRepositoryFactory.m */,
 				812C44091907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.h */,
@@ -244,6 +264,10 @@
 		812C43FC19079E7400FAF848 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				812C440E1907AF6E00FAF848 /* CSCategoryRepository.h */,
+				812C440F1907AF6E00FAF848 /* CSCategoryRepository.m */,
+				812C44111907AFA300FAF848 /* CSLabelRepository.h */,
+				812C44121907AFA300FAF848 /* CSLabelRepository.m */,
 				812C440019079FCD00FAF848 /* CSRepositoryFactory.h */,
 				812C440119079FCD00FAF848 /* CSRepositoryFactory.m */,
 				812C43FD19079EA000FAF848 /* CSSpendingModelRepository.h */,
@@ -363,13 +387,17 @@
 			files = (
 				8106C6E818D488E900963219 /* CSSaveSpendingTableViewController.m in Sources */,
 				812C440219079FCD00FAF848 /* CSRepositoryFactory.m in Sources */,
+				812C44131907AFA300FAF848 /* CSLabelRepository.m in Sources */,
 				810E44FA18D59E95009B526E /* CSDatePickerViewController.m in Sources */,
 				812C440B1907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.m in Sources */,
+				812C44101907AF6E00FAF848 /* CSCategoryRepository.m in Sources */,
 				8106C6C218D47E2F00963219 /* CSAppDelegate.m in Sources */,
 				812C44081907A11F00FAF848 /* CSSQLiteRepositoryFactory.m in Sources */,
 				818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */,
 				81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */,
+				812C44161907B14C00FAF848 /* CSSQLiteCategoryRepository.m in Sources */,
 				812C43FF19079EA000FAF848 /* CSSpendingModelRepository.m in Sources */,
+				812C44191907B18000FAF848 /* CSSQLiteLabelRepository.m in Sources */,
 				8106C6BE18D47E2F00963219 /* main.m in Sources */,
 				81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */,
 				812C44051907A05100FAF848 /* CSDataManager.m in Sources */,

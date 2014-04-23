@@ -7,8 +7,12 @@
 //
 
 #import "CSSpendingModelRepository.h"
+#import "CSSpendingModel.h"
 
 @implementation CSSpendingModelRepository
+{
+    NSMutableArray *_storage;
+}
 
 #pragma mark - Init
 
@@ -17,7 +21,7 @@
     self = [super init];
     if (self)
     {
-        
+        _storage = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -26,22 +30,29 @@
 
 - (NSArray *)getAll
 {
-    return nil;
+    return _storage;
 }
 
 - (CSSpendingModel *)get:(NSString *)key
 {
+    for (CSSpendingModel *model in _storage)
+    {
+        if ([model.key isEqualToString:key])
+        {
+            return model;
+        }
+    }
     return nil;
 }
 
 - (void)save:(CSSpendingModel *)model
 {
-    
+    [_storage addObject:model];
 }
 
 - (void)remove:(NSString *)key
 {
-    
+    [_storage removeObject:[self get:key]];
 }
 
 @end
