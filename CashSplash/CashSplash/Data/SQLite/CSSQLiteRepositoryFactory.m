@@ -15,10 +15,6 @@
 
 #define kDatabaseFile   @"db.sqlite3"
 
-#define kQueryCreateSpendingModelTable  @"CREATE TABLE spending_model(key TEXT PRIMARY KEY ASC, amount REAL, category TEXT, label TEXT, timestamp NUMERIC, note TEXT)"
-#define kQueryCreateCategoryTable       @"CREATE TABLE category(name TEXT PRIMARY KEY ASC)"
-#define kQueryCreateLabelTable          @"CREATE TABLE label(name TEXT PRIMARY KEY ASC)"
-
 @implementation CSSQLiteRepositoryFactory
 {
     NSString *_databasePath;
@@ -110,15 +106,14 @@
 
 - (BOOL)createTable:(NSString *)query
 {
-    sqlite3_stmt *statement;
-    if (sqlite3_prepare_v2(_database, [query UTF8String], -1, &statement, nil) == SQLITE_OK)
+    char *error;
+    if (sqlite3_exec(_database, [query UTF8String], NULL, NULL, &error) != SQLITE_OK)
     {
-        int result = sqlite3_step(statement);
-        sqlite3_finalize(statement);
-        
-        return result == SQLITE_DONE;
+        NSLog(@"Error: %@", [NSString stringWithUTF8String:error]);
+        sqlite3_close(_database);
+        return NO;
     }
-    return NO;
+    return YES;
 }
 
 #pragma mark - Public methods

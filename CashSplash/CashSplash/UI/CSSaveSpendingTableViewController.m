@@ -8,6 +8,9 @@
 
 #import "CSSaveSpendingTableViewController.h"
 
+#import "CSCategoryDataSource.h"
+#import "CSLabelDataSource.h"
+
 #define kCategoryIdentifier @"category"
 #define kLabelIdentifier @"label"
 
@@ -90,7 +93,7 @@
     {
         CSTablePickerViewController *categoryPickerController = segue.destinationViewController;
         categoryPickerController.delegate = self;
-        categoryPickerController.dataSource = [NSMutableArray array];
+        categoryPickerController.dataSource = [[CSCategoryDataSource alloc] init];
         categoryPickerController.selected = @"";
         categoryPickerController.identifier = kCategoryIdentifier;
         categoryPickerController.canAddItems = YES;
@@ -99,7 +102,7 @@
     {
         CSTablePickerViewController *labelPickerController = segue.destinationViewController;
         labelPickerController.delegate = self;
-        labelPickerController.dataSource = [NSMutableArray array];
+        labelPickerController.dataSource = [[CSLabelDataSource alloc] init];
         labelPickerController.selected = @"";
         labelPickerController.identifier = kLabelIdentifier;
         labelPickerController.canAddItems = YES;

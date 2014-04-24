@@ -29,17 +29,19 @@
 
 - (NSArray *)getAll
 {
-    return _storage;
+    return [NSArray arrayWithArray:_storage];
 }
 
-- (void)save:(NSString *)label
+- (BOOL)save:(NSString *)label
 {
     [_storage addObject:label];
+    return YES;
 }
 
-- (void)remove:(NSString *)label
+- (BOOL)remove:(NSString *)label
 {
     [_storage removeObject:label];
+    return YES;
 }
 
 @end

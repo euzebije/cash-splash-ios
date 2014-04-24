@@ -29,17 +29,19 @@
 
 - (NSArray *)getAll
 {
-    return _storage;
+    return [NSArray arrayWithArray:_storage];
 }
 
-- (void)save:(NSString *)category
+- (BOOL)save:(NSString *)category
 {
     [_storage addObject:category];
+    return YES;
 }
 
-- (void)remove:(NSString *)category
+- (BOOL)remove:(NSString *)category
 {
     [_storage removeObject:category];
+    return YES;
 }
 
 @end

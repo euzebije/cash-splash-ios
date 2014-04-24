@@ -14,7 +14,7 @@
 
 - (NSArray *)getAll;
 
-- (void)save:(NSString *)category;
-- (void)remove:(NSString *)category;
+- (BOOL)save:(NSString *)category;
+- (BOOL)remove:(NSString *)category;
 
 @end

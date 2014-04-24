@@ -30,7 +30,7 @@
 
 - (NSArray *)getAll
 {
-    return _storage;
+    return [NSArray arrayWithArray:_storage];
 }
 
 - (CSSpendingModel *)get:(NSString *)key

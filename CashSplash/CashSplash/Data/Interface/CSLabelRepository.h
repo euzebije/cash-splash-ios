@@ -14,7 +14,7 @@
 
 - (NSArray *)getAll;
 
-- (void)save:(NSString *)label;
-- (void)remove:(NSString *)label;
+- (BOOL)save:(NSString *)label;
+- (BOOL)remove:(NSString *)label;
 
 @end

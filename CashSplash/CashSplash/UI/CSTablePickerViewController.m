@@ -41,7 +41,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.dataSource.count;
+    return [self.dataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -49,7 +49,7 @@
     static NSString *cellReuseIdentifier = @"cellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseIdentifier forIndexPath:indexPath];
     
-    id item = [self.dataSource objectAtIndex:indexPath.row];
+    id item = [[self.dataSource items] objectAtIndex:indexPath.row];
     NSString *text = [self.delegate tablePicker:self displayForItem:item];
     cell.textLabel.text = text;
     if (self.selected == item)
@@ -69,8 +69,11 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        [self.dataSource removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        id item = [[self.dataSource items] objectAtIndex:indexPath.row];
+        if ([self.dataSource remove:item])
+        {
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
     }
 }
 
@@ -88,7 +91,7 @@
     selectedCell.accessoryType = UITableViewCellAccessoryCheckmark;
     _selectedCell = selectedCell;
     
-    self.selected = [self.dataSource objectAtIndex:indexPath.row];
+    self.selected = [[self.dataSource items] objectAtIndex:indexPath.row];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -103,10 +106,12 @@
 {
     if (item != nil)
     {
-        [self.dataSource addObject:item];
-        NSInteger row = MAX(0, self.dataSource.count - 1);
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        if ([self.dataSource save:item])
+        {
+            NSInteger row = MAX(0, self.dataSource.count - 1);
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+            [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        }
     }
 }
 

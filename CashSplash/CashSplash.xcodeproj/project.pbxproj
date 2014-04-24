@@ -33,6 +33,8 @@
 		812C44161907B14C00FAF848 /* CSSQLiteCategoryRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44151907B14C00FAF848 /* CSSQLiteCategoryRepository.m */; };
 		812C44191907B18000FAF848 /* CSSQLiteLabelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44181907B18000FAF848 /* CSSQLiteLabelRepository.m */; };
 		81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81374DA718D6406C00573148 /* CSSpendingModel.m */; };
+		815DE2E01909017F0018F577 /* CSCategoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 815DE2DF1909017F0018F577 /* CSCategoryDataSource.m */; };
+		815DE2E61909067C0018F577 /* CSLabelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 815DE2E51909067C0018F577 /* CSLabelDataSource.m */; };
 		81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */; };
 		818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -90,6 +92,10 @@
 		812C44181907B18000FAF848 /* CSSQLiteLabelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSQLiteLabelRepository.m; path = Data/SQLite/CSSQLiteLabelRepository.m; sourceTree = "<group>"; };
 		81374DA618D6406C00573148 /* CSSpendingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSpendingModel.h; path = Model/CSSpendingModel.h; sourceTree = "<group>"; };
 		81374DA718D6406C00573148 /* CSSpendingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModel.m; path = Model/CSSpendingModel.m; sourceTree = "<group>"; };
+		815DE2DE1909017F0018F577 /* CSCategoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCategoryDataSource.h; path = Data/DataSource/CSCategoryDataSource.h; sourceTree = "<group>"; };
+		815DE2DF1909017F0018F577 /* CSCategoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCategoryDataSource.m; path = Data/DataSource/CSCategoryDataSource.m; sourceTree = "<group>"; };
+		815DE2E41909067C0018F577 /* CSLabelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSLabelDataSource.h; path = Data/DataSource/CSLabelDataSource.h; sourceTree = "<group>"; };
+		815DE2E51909067C0018F577 /* CSLabelDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLabelDataSource.m; path = Data/DataSource/CSLabelDataSource.m; sourceTree = "<group>"; };
 		81636D9918F0755E00E3B72B /* CSTablePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTablePickerViewController.h; path = UI/CSTablePickerViewController.h; sourceTree = "<group>"; };
 		81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTablePickerViewController.m; path = UI/CSTablePickerViewController.m; sourceTree = "<group>"; };
 		818F010C18D5C2C60050C24E /* CSNewItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSNewItemTableViewController.h; path = UI/CSNewItemTableViewController.h; sourceTree = "<group>"; };
@@ -238,6 +244,7 @@
 		812C43FA19079E1100FAF848 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				815DE2DD190901610018F577 /* DataSource */,
 				812C43FC19079E7400FAF848 /* Interface */,
 				812C43FB19079E5A00FAF848 /* SQLite */,
 				812C44031907A05100FAF848 /* CSDataManager.h */,
@@ -274,6 +281,17 @@
 				812C43FE19079EA000FAF848 /* CSSpendingModelRepository.m */,
 			);
 			name = Interface;
+			sourceTree = "<group>";
+		};
+		815DE2DD190901610018F577 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				815DE2DE1909017F0018F577 /* CSCategoryDataSource.h */,
+				815DE2DF1909017F0018F577 /* CSCategoryDataSource.m */,
+				815DE2E41909067C0018F577 /* CSLabelDataSource.h */,
+				815DE2E51909067C0018F577 /* CSLabelDataSource.m */,
+			);
+			name = DataSource;
 			sourceTree = "<group>";
 		};
 		81636D9C18F07A4300E3B72B /* Data */ = {
@@ -395,6 +413,8 @@
 				812C44081907A11F00FAF848 /* CSSQLiteRepositoryFactory.m in Sources */,
 				818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */,
 				81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */,
+				815DE2E01909017F0018F577 /* CSCategoryDataSource.m in Sources */,
+				815DE2E61909067C0018F577 /* CSLabelDataSource.m in Sources */,
 				812C44161907B14C00FAF848 /* CSSQLiteCategoryRepository.m in Sources */,
 				812C43FF19079EA000FAF848 /* CSSpendingModelRepository.m in Sources */,
 				812C44191907B18000FAF848 /* CSSQLiteLabelRepository.m in Sources */,

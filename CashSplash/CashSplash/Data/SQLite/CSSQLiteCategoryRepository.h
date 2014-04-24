@@ -9,6 +9,8 @@
 #import "CSCategoryRepository.h"
 #import <sqlite3.h>
 
+#define kQueryCreateCategoryTable       @"CREATE TABLE category(name TEXT PRIMARY KEY ASC)"
+
 @interface CSSQLiteCategoryRepository : CSCategoryRepository
 
 - (instancetype)initWithDatabase:(sqlite3 *)database;
