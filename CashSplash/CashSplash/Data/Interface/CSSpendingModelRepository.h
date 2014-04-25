@@ -17,7 +17,7 @@
 - (NSArray *)getAll;
 - (CSSpendingModel *)get:(NSString *)key;
 
-- (void)save:(CSSpendingModel *)model;
-- (void)remove:(NSString *)key;
+- (BOOL)save:(CSSpendingModel *)model;
+- (BOOL)remove:(NSString *)key;
 
 @end

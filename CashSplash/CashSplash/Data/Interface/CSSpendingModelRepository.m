@@ -45,14 +45,16 @@
     return nil;
 }
 
-- (void)save:(CSSpendingModel *)model
+- (BOOL)save:(CSSpendingModel *)model
 {
     [_storage addObject:model];
+    return YES;
 }
 
-- (void)remove:(NSString *)key
+- (BOOL)remove:(NSString *)key
 {
     [_storage removeObject:[self get:key]];
+    return YES;
 }
 
 @end

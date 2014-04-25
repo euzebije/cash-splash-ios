@@ -44,6 +44,7 @@
             
             [items addObject:name];
         }
+        sqlite3_finalize(statement);
     }
     return items;
 }
@@ -56,6 +57,7 @@
         sqlite3_bind_text(statement, 1, [category UTF8String], -1, SQLITE_TRANSIENT);
         if (sqlite3_step(statement) == SQLITE_DONE)
         {
+            sqlite3_finalize(statement);
             return YES;
         }
     }
@@ -70,6 +72,7 @@
         sqlite3_bind_text(statement, 1, [category UTF8String], -1, SQLITE_TRANSIENT);
         if (sqlite3_step(statement) == SQLITE_DONE)
         {
+            sqlite3_finalize(statement);
             return YES;
         }
     }

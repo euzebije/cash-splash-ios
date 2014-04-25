@@ -9,7 +9,7 @@
 #import "CSSpendingModelRepository.h"
 #import <sqlite3.h>
 
-#define kQueryCreateSpendingModelTable  @"CREATE TABLE spending_model(key TEXT PRIMARY KEY ASC, amount REAL, category TEXT, label TEXT, timestamp NUMERIC, note TEXT)"
+#define kQueryCreateSpendingModelTable  @"CREATE TABLE spending_model(key TEXT PRIMARY KEY ASC, amount REAL, category TEXT, label TEXT, timestamp INTEGER, note TEXT)"
 
 @interface CSSQLiteSpendingModelRepository : CSSpendingModelRepository
 

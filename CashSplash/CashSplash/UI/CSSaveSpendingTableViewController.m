@@ -10,6 +10,10 @@
 
 #import "CSCategoryDataSource.h"
 #import "CSLabelDataSource.h"
+#import "CSDataManager.h"
+#import "CSRepositoryFactory.h"
+#import "CSSpendingModelRepository.h"
+#import "CSSpendingModel.h"
 
 #define kCategoryIdentifier @"category"
 #define kLabelIdentifier @"label"
@@ -35,6 +39,8 @@
 {
     [super viewDidLoad];
     
+    _category = nil;
+    _label = nil;
     [self setDate:[NSDate date]];
 }
 
@@ -45,7 +51,32 @@
 
 - (IBAction)saveTapped:(id)sender
 {
-
+    [self.amountTextField resignFirstResponder];
+    [self.noteTextField resignFirstResponder];
+    
+    double amount = [self.amountTextField.text doubleValue];
+    NSString *note = self.noteTextField.text;
+    
+    CSSpendingModel *model = [[CSSpendingModel alloc] init];
+    model.amount = amount;
+    model.category = _category;
+    model.label = _label;
+    model.timestamp = _date;
+    model.note = note;
+    
+    CSRepositoryFactory *factory = [[CSDataManager sharedManager] repositoryFactory];
+    CSSpendingModelRepository *repository = [factory createSpendingModelRepository];
+    
+    if ([repository save:model])
+    {
+        self.amountTextField.text = @"";
+        _category = nil;
+        self.categoryLabel.text = @"";
+        _label = nil;
+        self.labelLabel.text = @"";
+        [self setDate:[NSDate date]];
+        self.noteTextField.text = @"";
+    }
 }
 
 #pragma mark - CSTablePickerDelegate
