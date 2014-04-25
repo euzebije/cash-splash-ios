@@ -37,6 +37,7 @@
 		815DE2E61909067C0018F577 /* CSLabelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 815DE2E51909067C0018F577 /* CSLabelDataSource.m */; };
 		81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */; };
 		818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */; };
+		81CD0F77190A501E003D21E2 /* CSInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CD0F76190A501E003D21E2 /* CSInfoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,8 @@
 		81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTablePickerViewController.m; path = UI/CSTablePickerViewController.m; sourceTree = "<group>"; };
 		818F010C18D5C2C60050C24E /* CSNewItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSNewItemTableViewController.h; path = UI/CSNewItemTableViewController.h; sourceTree = "<group>"; };
 		818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSNewItemTableViewController.m; path = UI/CSNewItemTableViewController.m; sourceTree = "<group>"; };
+		81CD0F75190A501E003D21E2 /* CSInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSInfoView.h; path = UI/Component/CSInfoView.h; sourceTree = "<group>"; };
+		81CD0F76190A501E003D21E2 /* CSInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSInfoView.m; path = UI/Component/CSInfoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +207,7 @@
 		8106C6E018D47EEE00963219 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				81CD0F74190A4F4A003D21E2 /* Component */,
 				8106C6E918D488EF00963219 /* Controller */,
 				8106C6E418D47F3100963219 /* Storyboard-iPhone.storyboard */,
 			);
@@ -301,6 +305,15 @@
 				818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		81CD0F74190A4F4A003D21E2 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				81CD0F75190A501E003D21E2 /* CSInfoView.h */,
+				81CD0F76190A501E003D21E2 /* CSInfoView.m */,
+			);
+			name = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +434,7 @@
 				8106C6BE18D47E2F00963219 /* main.m in Sources */,
 				81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */,
 				812C44051907A05100FAF848 /* CSDataManager.m in Sources */,
+				81CD0F77190A501E003D21E2 /* CSInfoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,8 @@
 #import "CSSpendingModelRepository.h"
 #import "CSSpendingModel.h"
 
+#import "CSInfoView.h"
+
 #define kCategoryIdentifier @"category"
 #define kLabelIdentifier @"label"
 
@@ -76,6 +78,8 @@
         self.labelLabel.text = @"";
         [self setDate:[NSDate date]];
         self.noteTextField.text = @"";
+        
+        [CSInfoView animateWithDuration:1.0f fadeDuration:0.3f text:@"Got it!" containerView:self.view];
     }
 }
 
