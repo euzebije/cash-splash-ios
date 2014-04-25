@@ -11,6 +11,15 @@
 
 @class CSTablePickerViewController;
 
+@protocol CSTablePickerDatasource <NSObject>
+
+- (NSArray *)items;
+- (NSInteger)count;
+- (BOOL)save:(id)item;
+- (BOOL)remove:(id)item;
+
+@end
+
 @protocol CSTablePickerDelegate <NSObject>
 
 - (void)tablePicker:(CSTablePickerViewController *)tablePicker didPickValue:(id)value;
@@ -20,12 +29,12 @@
 
 @interface CSTablePickerViewController : UITableViewController <CSNewItemDelegate>
 
-@property (nonatomic, retain) NSMutableArray *dataSource;
 @property (nonatomic, assign) id selected;
 @property (nonatomic, copy) NSString *identifier;
 
 @property (nonatomic, assign) BOOL canAddItems;
 
+@property (nonatomic, retain) id<CSTablePickerDatasource> dataSource;
 @property (nonatomic, assign) id<CSTablePickerDelegate> delegate;
 
 @end

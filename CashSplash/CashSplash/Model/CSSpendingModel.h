@@ -10,7 +10,7 @@
 
 @interface CSSpendingModel : NSObject
 
-@property (nonatomic, copy) NSString *id;
+@property (nonatomic, copy) NSString *key;
 @property (nonatomic, assign) CGFloat amount;
 @property (nonatomic, copy) NSString *category;
 @property (nonatomic, copy) NSString *label;
