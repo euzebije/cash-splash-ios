@@ -17,14 +17,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="Xq7-3V-19P" kind="relationship" relationship="viewControllers" id="Ute-iO-pIV"/>
-                        <segue destination="zmB-dY-kQK" kind="relationship" relationship="viewControllers" id="ZP5-pc-ivX"/>
-                        <segue destination="M7J-4A-WCD" kind="relationship" relationship="viewControllers" id="aky-Hv-7fZ"/>
-                        <segue destination="7Fm-ug-Ffx" kind="relationship" relationship="viewControllers" id="hJa-69-tb7"/>
+                        <segue destination="pcU-Ml-C2X" kind="relationship" relationship="viewControllers" id="pjf-q7-cd6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQd-5C-WBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115" y="588"/>
+            <point key="canvasLocation" x="253" y="602"/>
         </scene>
         <!--Save Spending Table View Controller - Spend-->
         <scene sceneID="wl1-bZ-mUz">
@@ -453,69 +451,55 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1115" y="-368"/>
         </scene>
-        <!--View Controller - Stats-->
-        <scene sceneID="8Kh-GQ-9RU">
+        <!--Data Table View Controller - Data-->
+        <scene sceneID="2vv-cM-nRS">
             <objects>
-                <viewController id="zmB-dY-kQK" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Wm5-pj-WyX"/>
-                        <viewControllerLayoutGuide type="bottom" id="W3d-QV-Gr8"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aRz-yd-m2g">
+                <tableViewController id="QeI-hI-qMI" customClass="CSDataTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LxW-MS-aju">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Stats" image="chart-tab-icon" id="MJp-58-L7Y"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nvJ-fK-XCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="itemCell" id="JCe-w8-r8C">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JCe-w8-r8C" id="t2b-M8-LIj">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QeI-hI-qMI" id="iyI-ml-fw8"/>
+                            <outlet property="delegate" destination="QeI-hI-qMI" id="rdO-6h-QeV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Data" id="TCq-Dc-Mri"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X79-iB-JU9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1115" y="328"/>
+            <point key="canvasLocation" x="1652" y="1000"/>
         </scene>
-        <!--View Controller - Data-->
-        <scene sceneID="RNe-2u-RRy">
+        <!--Navigation Controller - Data-->
+        <scene sceneID="M9h-kR-zcu">
             <objects>
-                <viewController id="M7J-4A-WCD" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iUA-2c-YKC"/>
-                        <viewControllerLayoutGuide type="bottom" id="dw7-3f-hvS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="al0-G4-GbG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Data" image="data-tab-icon" id="OQd-Ub-ttW"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e6H-iy-Ou8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="pcU-Ml-C2X" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Data" image="data-tab-icon" id="vq5-zO-FbU"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lzF-9R-RQQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QeI-hI-qMI" kind="relationship" relationship="rootViewController" id="VcL-HA-8p5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y71-dS-Sn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1115" y="1004"/>
-        </scene>
-        <!--View Controller - Settings-->
-        <scene sceneID="gWc-ta-ecQ">
-            <objects>
-                <viewController id="7Fm-ug-Ffx" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eq9-CC-Hn8"/>
-                        <viewControllerLayoutGuide type="bottom" id="44o-Oz-fzC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fec-kK-6EN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings-tab-icon" id="ILW-Lr-X8t"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A4L-97-rtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1115" y="1676"/>
+            <point key="canvasLocation" x="1115" y="1000"/>
         </scene>
     </scenes>
     <resources>
-        <image name="chart-tab-icon" width="25" height="25"/>
         <image name="data-tab-icon" width="25" height="25"/>
         <image name="payment-tab-icon" width="25" height="25"/>
-        <image name="settings-tab-icon" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
