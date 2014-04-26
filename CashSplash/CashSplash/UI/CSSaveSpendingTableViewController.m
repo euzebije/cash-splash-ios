@@ -41,8 +41,8 @@
 {
     [super viewDidLoad];
     
-    _category = nil;
-    _label = nil;
+    _category = @"";
+    _label = @"";
     [self setDate:[NSDate date]];
 }
 
@@ -72,9 +72,9 @@
     if ([repository save:model])
     {
         self.amountTextField.text = @"";
-        _category = nil;
+        _category = @"";
         self.categoryLabel.text = @"";
-        _label = nil;
+        _label = @"";
         self.labelLabel.text = @"";
         [self setDate:[NSDate date]];
         self.noteTextField.text = @"";
