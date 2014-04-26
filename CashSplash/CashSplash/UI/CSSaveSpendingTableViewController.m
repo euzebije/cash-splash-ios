@@ -129,7 +129,7 @@
         CSTablePickerViewController *categoryPickerController = segue.destinationViewController;
         categoryPickerController.delegate = self;
         categoryPickerController.dataSource = [[CSCategoryDataSource alloc] init];
-        categoryPickerController.selected = @"";
+        categoryPickerController.selected = _category;
         categoryPickerController.identifier = kCategoryIdentifier;
         categoryPickerController.canAddItems = YES;
     }
@@ -138,7 +138,7 @@
         CSTablePickerViewController *labelPickerController = segue.destinationViewController;
         labelPickerController.delegate = self;
         labelPickerController.dataSource = [[CSLabelDataSource alloc] init];
-        labelPickerController.selected = @"";
+        labelPickerController.selected = _label;
         labelPickerController.identifier = kLabelIdentifier;
         labelPickerController.canAddItems = YES;
     }

@@ -52,7 +52,8 @@
     id item = [[self.dataSource items] objectAtIndex:indexPath.row];
     NSString *text = [self.delegate tablePicker:self displayForItem:item];
     cell.textLabel.text = text;
-    if (self.selected == item)
+    
+    if (self.selected == item || [self.selected isEqualToString:item])
     {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         _selectedCell = cell;
