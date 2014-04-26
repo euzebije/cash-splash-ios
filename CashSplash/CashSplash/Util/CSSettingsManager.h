@@ -14,7 +14,11 @@
 
 - (instancetype)init;
 
+- (void)sync;
+
 @property (nonatomic, readonly) NSString *dropBoxAppKey;
 @property (nonatomic, readonly) NSString *dropBoxAppSecret;
+
+@property (nonatomic, assign) BOOL useDropbox;
 
 @end

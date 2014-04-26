@@ -11,6 +11,8 @@
 #define kDropboxAppKey      @"dropbox_app_key"
 #define kDropboxAppSecret   @"dropbox_app_secret"
 
+#define kUseDropbox         @"use_dropbox"
+
 @implementation CSSettingsManager
 
 #pragma mark - Singleton
@@ -32,13 +34,27 @@
     self = [super init];
     if (self)
     {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"settings" ofType:@"plist"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
         NSDictionary *settings = [[NSDictionary alloc] initWithContentsOfFile:path];
         
         _dropBoxAppKey = [settings objectForKey:kDropboxAppKey];
         _dropBoxAppSecret = [settings objectForKey:kDropboxAppSecret];
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        self.useDropbox = [defaults boolForKey:kUseDropbox];
     }
     return self;
+}
+
+#pragma mark - Public methods
+
+- (void)sync
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setBool:self.useDropbox forKey:kUseDropbox];
+    
+    [defaults synchronize];
 }
 
 @end

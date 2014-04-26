@@ -8,7 +8,9 @@
 
 #import "CSDataManager.h"
 
+#import "CSSettingsManager.h"
 #import "CSSQLiteRepositoryFactory.h"
+#import "CSDropboxRepositoryFactory.h"
 
 @implementation CSDataManager
 {
@@ -33,9 +35,27 @@
 {
     if (_repositoryFactory == nil)
     {
-        _repositoryFactory = [[CSSQLiteRepositoryFactory alloc] init];
+        _repositoryFactory = [self createFactory];
     }
     return _repositoryFactory;
+}
+
+- (void)reload
+{
+    _repositoryFactory = nil;
+}
+
+#pragma mark - Private methods
+
+- (CSRepositoryFactory *)createFactory
+{
+    BOOL useDropbox = [[CSSettingsManager sharedManager] useDropbox];
+    if (useDropbox)
+    {
+        return [[CSDropboxRepositoryFactory alloc] init];
+    }
+    
+    return [[CSSQLiteRepositoryFactory alloc] init];
 }
 
 @end

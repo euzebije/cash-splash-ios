@@ -20,8 +20,6 @@
 		8106C6D518D47E3000963219 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8106C6D318D47E3000963219 /* InfoPlist.strings */; };
 		8106C6D718D47E3000963219 /* CashSplashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106C6D618D47E3000963219 /* CashSplashTests.m */; };
 		8106C6E518D47F3100963219 /* Storyboard-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8106C6E418D47F3100963219 /* Storyboard-iPhone.storyboard */; };
-		8106C6E818D488E900963219 /* CSSaveSpendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */; };
-		810E44FA18D59E95009B526E /* CSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E44F918D59E95009B526E /* CSDatePickerViewController.m */; };
 		812C43FF19079EA000FAF848 /* CSSpendingModelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C43FE19079EA000FAF848 /* CSSpendingModelRepository.m */; };
 		812C440219079FCD00FAF848 /* CSRepositoryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C440119079FCD00FAF848 /* CSRepositoryFactory.m */; };
 		812C44051907A05100FAF848 /* CSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44041907A05100FAF848 /* CSDataManager.m */; };
@@ -42,13 +40,16 @@
 		814F5DF9190BF544004750EF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814F5DF8190BF544004750EF /* QuartzCore.framework */; };
 		814F5DFB190BF55D004750EF /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 814F5DFA190BF55D004750EF /* libc++.dylib */; };
 		814F5E02190BF6AD004750EF /* CSDropboxRepositoryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E01190BF6AD004750EF /* CSDropboxRepositoryFactory.m */; };
+		814F5E07190BFBC6004750EF /* CSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E04190BFBC6004750EF /* CSDatePickerViewController.m */; };
+		814F5E08190BFBC6004750EF /* CSTablePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E06190BFBC6004750EF /* CSTablePickerViewController.m */; };
+		814F5E0B190BFBD2004750EF /* CSNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E0A190BFBD2004750EF /* CSNewItemTableViewController.m */; };
+		814F5E12190BFBDF004750EF /* CSDataDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E0D190BFBDF004750EF /* CSDataDetailsTableViewController.m */; };
+		814F5E13190BFBDF004750EF /* CSDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E0F190BFBDF004750EF /* CSDataTableViewController.m */; };
+		814F5E14190BFBDF004750EF /* CSSaveSpendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E11190BFBDF004750EF /* CSSaveSpendingTableViewController.m */; };
+		814F5E17190BFC28004750EF /* CSSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E16190BFC28004750EF /* CSSettingsTableViewController.m */; };
 		815DE2E01909017F0018F577 /* CSCategoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 815DE2DF1909017F0018F577 /* CSCategoryDataSource.m */; };
 		815DE2E61909067C0018F577 /* CSLabelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 815DE2E51909067C0018F577 /* CSLabelDataSource.m */; };
-		81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */; };
-		816F02B2190BAC3B0048272F /* CSDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F02B1190BAC3B0048272F /* CSDataTableViewController.m */; };
 		816F02B5190BACE80048272F /* CSSpendingModelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F02B4190BACE80048272F /* CSSpendingModelDataSource.m */; };
-		816F02BB190BB8680048272F /* CSDataDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F02BA190BB8680048272F /* CSDataDetailsTableViewController.m */; };
-		818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */; };
 		81CD0F77190A501E003D21E2 /* CSInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CD0F76190A501E003D21E2 /* CSInfoView.m */; };
 /* End PBXBuildFile section */
 
@@ -80,10 +81,6 @@
 		8106C6D418D47E3000963219 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8106C6D618D47E3000963219 /* CashSplashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CashSplashTests.m; sourceTree = "<group>"; };
 		8106C6E418D47F3100963219 /* Storyboard-iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Storyboard-iPhone.storyboard"; path = "UI/Storyboard-iPhone.storyboard"; sourceTree = "<group>"; };
-		8106C6E618D488E900963219 /* CSSaveSpendingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSaveSpendingTableViewController.h; path = UI/CSSaveSpendingTableViewController.h; sourceTree = "<group>"; };
-		8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSaveSpendingTableViewController.m; path = UI/CSSaveSpendingTableViewController.m; sourceTree = "<group>"; };
-		810E44F818D59E95009B526E /* CSDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDatePickerViewController.h; path = UI/CSDatePickerViewController.h; sourceTree = "<group>"; };
-		810E44F918D59E95009B526E /* CSDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDatePickerViewController.m; path = UI/CSDatePickerViewController.m; sourceTree = "<group>"; };
 		812C43FD19079EA000FAF848 /* CSSpendingModelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSpendingModelRepository.h; path = Data/Interface/CSSpendingModelRepository.h; sourceTree = "<group>"; };
 		812C43FE19079EA000FAF848 /* CSSpendingModelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModelRepository.m; path = Data/Interface/CSSpendingModelRepository.m; sourceTree = "<group>"; };
 		812C440019079FCD00FAF848 /* CSRepositoryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSRepositoryFactory.h; path = Data/Interface/CSRepositoryFactory.h; sourceTree = "<group>"; };
@@ -116,20 +113,26 @@
 		814F5DFA190BF55D004750EF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		814F5E00190BF6AD004750EF /* CSDropboxRepositoryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDropboxRepositoryFactory.h; path = Data/Dropbox/CSDropboxRepositoryFactory.h; sourceTree = "<group>"; };
 		814F5E01190BF6AD004750EF /* CSDropboxRepositoryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDropboxRepositoryFactory.m; path = Data/Dropbox/CSDropboxRepositoryFactory.m; sourceTree = "<group>"; };
+		814F5E03190BFBC6004750EF /* CSDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDatePickerViewController.h; path = UI/Controller/Pickers/CSDatePickerViewController.h; sourceTree = "<group>"; };
+		814F5E04190BFBC6004750EF /* CSDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDatePickerViewController.m; path = UI/Controller/Pickers/CSDatePickerViewController.m; sourceTree = "<group>"; };
+		814F5E05190BFBC6004750EF /* CSTablePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTablePickerViewController.h; path = UI/Controller/Pickers/CSTablePickerViewController.h; sourceTree = "<group>"; };
+		814F5E06190BFBC6004750EF /* CSTablePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTablePickerViewController.m; path = UI/Controller/Pickers/CSTablePickerViewController.m; sourceTree = "<group>"; };
+		814F5E09190BFBD2004750EF /* CSNewItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSNewItemTableViewController.h; path = UI/Controller/Data/CSNewItemTableViewController.h; sourceTree = "<group>"; };
+		814F5E0A190BFBD2004750EF /* CSNewItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSNewItemTableViewController.m; path = UI/Controller/Data/CSNewItemTableViewController.m; sourceTree = "<group>"; };
+		814F5E0C190BFBDE004750EF /* CSDataDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataDetailsTableViewController.h; path = UI/Controller/CSDataDetailsTableViewController.h; sourceTree = "<group>"; };
+		814F5E0D190BFBDF004750EF /* CSDataDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataDetailsTableViewController.m; path = UI/Controller/CSDataDetailsTableViewController.m; sourceTree = "<group>"; };
+		814F5E0E190BFBDF004750EF /* CSDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataTableViewController.h; path = UI/Controller/CSDataTableViewController.h; sourceTree = "<group>"; };
+		814F5E0F190BFBDF004750EF /* CSDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataTableViewController.m; path = UI/Controller/CSDataTableViewController.m; sourceTree = "<group>"; };
+		814F5E10190BFBDF004750EF /* CSSaveSpendingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSaveSpendingTableViewController.h; path = UI/Controller/CSSaveSpendingTableViewController.h; sourceTree = "<group>"; };
+		814F5E11190BFBDF004750EF /* CSSaveSpendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSaveSpendingTableViewController.m; path = UI/Controller/CSSaveSpendingTableViewController.m; sourceTree = "<group>"; };
+		814F5E15190BFC28004750EF /* CSSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSettingsTableViewController.h; path = UI/Controller/CSSettingsTableViewController.h; sourceTree = "<group>"; };
+		814F5E16190BFC28004750EF /* CSSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSettingsTableViewController.m; path = UI/Controller/CSSettingsTableViewController.m; sourceTree = "<group>"; };
 		815DE2DE1909017F0018F577 /* CSCategoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCategoryDataSource.h; path = Data/DataSource/CSCategoryDataSource.h; sourceTree = "<group>"; };
 		815DE2DF1909017F0018F577 /* CSCategoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCategoryDataSource.m; path = Data/DataSource/CSCategoryDataSource.m; sourceTree = "<group>"; };
 		815DE2E41909067C0018F577 /* CSLabelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSLabelDataSource.h; path = Data/DataSource/CSLabelDataSource.h; sourceTree = "<group>"; };
 		815DE2E51909067C0018F577 /* CSLabelDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLabelDataSource.m; path = Data/DataSource/CSLabelDataSource.m; sourceTree = "<group>"; };
-		81636D9918F0755E00E3B72B /* CSTablePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTablePickerViewController.h; path = UI/CSTablePickerViewController.h; sourceTree = "<group>"; };
-		81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTablePickerViewController.m; path = UI/CSTablePickerViewController.m; sourceTree = "<group>"; };
-		816F02B0190BAC3B0048272F /* CSDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataTableViewController.h; path = UI/CSDataTableViewController.h; sourceTree = "<group>"; };
-		816F02B1190BAC3B0048272F /* CSDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataTableViewController.m; path = UI/CSDataTableViewController.m; sourceTree = "<group>"; };
 		816F02B3190BACE80048272F /* CSSpendingModelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSpendingModelDataSource.h; path = Data/DataSource/CSSpendingModelDataSource.h; sourceTree = "<group>"; };
 		816F02B4190BACE80048272F /* CSSpendingModelDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModelDataSource.m; path = Data/DataSource/CSSpendingModelDataSource.m; sourceTree = "<group>"; };
-		816F02B9190BB8680048272F /* CSDataDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataDetailsTableViewController.h; path = UI/CSDataDetailsTableViewController.h; sourceTree = "<group>"; };
-		816F02BA190BB8680048272F /* CSDataDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataDetailsTableViewController.m; path = UI/CSDataDetailsTableViewController.m; sourceTree = "<group>"; };
-		818F010C18D5C2C60050C24E /* CSNewItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSNewItemTableViewController.h; path = UI/CSNewItemTableViewController.h; sourceTree = "<group>"; };
-		818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSNewItemTableViewController.m; path = UI/CSNewItemTableViewController.m; sourceTree = "<group>"; };
 		81CD0F75190A501E003D21E2 /* CSInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSInfoView.h; path = UI/Component/CSInfoView.h; sourceTree = "<group>"; };
 		81CD0F76190A501E003D21E2 /* CSInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSInfoView.m; path = UI/Component/CSInfoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -271,12 +274,14 @@
 			children = (
 				81636D9C18F07A4300E3B72B /* Data */,
 				810E44EA18D59487009B526E /* Pickers */,
-				816F02B9190BB8680048272F /* CSDataDetailsTableViewController.h */,
-				816F02BA190BB8680048272F /* CSDataDetailsTableViewController.m */,
-				816F02B0190BAC3B0048272F /* CSDataTableViewController.h */,
-				816F02B1190BAC3B0048272F /* CSDataTableViewController.m */,
-				8106C6E618D488E900963219 /* CSSaveSpendingTableViewController.h */,
-				8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */,
+				814F5E0C190BFBDE004750EF /* CSDataDetailsTableViewController.h */,
+				814F5E0D190BFBDF004750EF /* CSDataDetailsTableViewController.m */,
+				814F5E0E190BFBDF004750EF /* CSDataTableViewController.h */,
+				814F5E0F190BFBDF004750EF /* CSDataTableViewController.m */,
+				814F5E10190BFBDF004750EF /* CSSaveSpendingTableViewController.h */,
+				814F5E11190BFBDF004750EF /* CSSaveSpendingTableViewController.m */,
+				814F5E15190BFC28004750EF /* CSSettingsTableViewController.h */,
+				814F5E16190BFC28004750EF /* CSSettingsTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -284,10 +289,10 @@
 		810E44EA18D59487009B526E /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
-				810E44F818D59E95009B526E /* CSDatePickerViewController.h */,
-				810E44F918D59E95009B526E /* CSDatePickerViewController.m */,
-				81636D9918F0755E00E3B72B /* CSTablePickerViewController.h */,
-				81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */,
+				814F5E03190BFBC6004750EF /* CSDatePickerViewController.h */,
+				814F5E04190BFBC6004750EF /* CSDatePickerViewController.m */,
+				814F5E05190BFBC6004750EF /* CSTablePickerViewController.h */,
+				814F5E06190BFBC6004750EF /* CSTablePickerViewController.m */,
 			);
 			name = Pickers;
 			sourceTree = "<group>";
@@ -369,8 +374,8 @@
 		81636D9C18F07A4300E3B72B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				818F010C18D5C2C60050C24E /* CSNewItemTableViewController.h */,
-				818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */,
+				814F5E09190BFBD2004750EF /* CSNewItemTableViewController.h */,
+				814F5E0A190BFBD2004750EF /* CSNewItemTableViewController.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -485,19 +490,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8106C6E818D488E900963219 /* CSSaveSpendingTableViewController.m in Sources */,
 				812C440219079FCD00FAF848 /* CSRepositoryFactory.m in Sources */,
 				812C44131907AFA300FAF848 /* CSLabelRepository.m in Sources */,
-				810E44FA18D59E95009B526E /* CSDatePickerViewController.m in Sources */,
 				812C440B1907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.m in Sources */,
 				816F02B5190BACE80048272F /* CSSpendingModelDataSource.m in Sources */,
-				816F02BB190BB8680048272F /* CSDataDetailsTableViewController.m in Sources */,
+				814F5E07190BFBC6004750EF /* CSDatePickerViewController.m in Sources */,
 				812C44101907AF6E00FAF848 /* CSCategoryRepository.m in Sources */,
+				814F5E12190BFBDF004750EF /* CSDataDetailsTableViewController.m in Sources */,
+				814F5E13190BFBDF004750EF /* CSDataTableViewController.m in Sources */,
 				8106C6C218D47E2F00963219 /* CSAppDelegate.m in Sources */,
 				812C44081907A11F00FAF848 /* CSSQLiteRepositoryFactory.m in Sources */,
-				818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */,
-				81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */,
 				815DE2E01909017F0018F577 /* CSCategoryDataSource.m in Sources */,
+				814F5E17190BFC28004750EF /* CSSettingsTableViewController.m in Sources */,
 				815DE2E61909067C0018F577 /* CSLabelDataSource.m in Sources */,
 				812C44161907B14C00FAF848 /* CSSQLiteCategoryRepository.m in Sources */,
 				812C43FF19079EA000FAF848 /* CSSpendingModelRepository.m in Sources */,
@@ -505,10 +509,12 @@
 				8106C6BE18D47E2F00963219 /* main.m in Sources */,
 				814F5DEF190BF2E8004750EF /* CSSettingsManager.m in Sources */,
 				814F5E02190BF6AD004750EF /* CSDropboxRepositoryFactory.m in Sources */,
+				814F5E14190BFBDF004750EF /* CSSaveSpendingTableViewController.m in Sources */,
+				814F5E08190BFBC6004750EF /* CSTablePickerViewController.m in Sources */,
 				81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */,
-				816F02B2190BAC3B0048272F /* CSDataTableViewController.m in Sources */,
 				812C44051907A05100FAF848 /* CSDataManager.m in Sources */,
 				81CD0F77190A501E003D21E2 /* CSInfoView.m in Sources */,
+				814F5E0B190BFBD2004750EF /* CSNewItemTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
