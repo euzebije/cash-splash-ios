@@ -17,11 +17,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="Xq7-3V-19P" kind="relationship" relationship="viewControllers" id="Ute-iO-pIV"/>
+                        <segue destination="zmB-dY-kQK" kind="relationship" relationship="viewControllers" id="ZP5-pc-ivX"/>
+                        <segue destination="M7J-4A-WCD" kind="relationship" relationship="viewControllers" id="aky-Hv-7fZ"/>
+                        <segue destination="7Fm-ug-Ffx" kind="relationship" relationship="viewControllers" id="hJa-69-tb7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQd-5C-WBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="531" y="-368"/>
+            <point key="canvasLocation" x="-115" y="588"/>
         </scene>
         <!--Save Spending Table View Controller - Spend-->
         <scene sceneID="wl1-bZ-mUz">
@@ -431,11 +434,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="3430" y="-587"/>
         </scene>
-        <!--Navigation Controller - Spend-->
+        <!--Navigation Controller - Payment-->
         <scene sceneID="DSa-HU-CzT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xq7-3V-19P" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Spend" id="7Wr-LD-PSb"/>
+                    <tabBarItem key="tabBarItem" title="Payment" image="payment-tab-icon" id="7Wr-LD-PSb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SnP-eA-gsf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -450,7 +453,70 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1115" y="-368"/>
         </scene>
+        <!--View Controller - Stats-->
+        <scene sceneID="8Kh-GQ-9RU">
+            <objects>
+                <viewController id="zmB-dY-kQK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wm5-pj-WyX"/>
+                        <viewControllerLayoutGuide type="bottom" id="W3d-QV-Gr8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aRz-yd-m2g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stats" image="chart-tab-icon" id="MJp-58-L7Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nvJ-fK-XCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1115" y="328"/>
+        </scene>
+        <!--View Controller - Data-->
+        <scene sceneID="RNe-2u-RRy">
+            <objects>
+                <viewController id="M7J-4A-WCD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iUA-2c-YKC"/>
+                        <viewControllerLayoutGuide type="bottom" id="dw7-3f-hvS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="al0-G4-GbG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Data" image="data-tab-icon" id="OQd-Ub-ttW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6H-iy-Ou8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1115" y="1004"/>
+        </scene>
+        <!--View Controller - Settings-->
+        <scene sceneID="gWc-ta-ecQ">
+            <objects>
+                <viewController id="7Fm-ug-Ffx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eq9-CC-Hn8"/>
+                        <viewControllerLayoutGuide type="bottom" id="44o-Oz-fzC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fec-kK-6EN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings-tab-icon" id="ILW-Lr-X8t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A4L-97-rtD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1115" y="1676"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="chart-tab-icon" width="25" height="25"/>
+        <image name="data-tab-icon" width="25" height="25"/>
+        <image name="payment-tab-icon" width="25" height="25"/>
+        <image name="settings-tab-icon" width="25" height="25"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
