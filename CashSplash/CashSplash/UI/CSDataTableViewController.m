@@ -11,6 +11,8 @@
 #import "CSSpendingModel.h"
 #import "CSSpendingModelDataSource.h"
 
+#import "CSDataDetailsTableViewController.h"
+
 @implementation CSDataTableViewController
 {
     CSSpendingModelDataSource *_dataSource;
@@ -73,15 +75,18 @@
     }
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"itemDetails"])
+    {
+        CSDataDetailsTableViewController *viewController = [segue destinationViewController];
+        UITableViewCell *cell = (UITableViewCell *)sender;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+        viewController.model = [[_dataSource items] objectAtIndex:indexPath.row];
+    }
 }
-*/
 
 @end
