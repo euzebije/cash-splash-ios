@@ -27,11 +27,16 @@
     self = [super init];
     if (self)
     {
-        CSRepositoryFactory *factory = [[CSDataManager sharedManager] repositoryFactory];
-        _repository = [factory createSpendingModelRepository];
-        _items = [NSMutableArray arrayWithArray:[_repository getAll]];
+        [self reload];
     }
     return self;
+}
+
+- (void)reload
+{
+    CSRepositoryFactory *factory = [[CSDataManager sharedManager] repositoryFactory];
+    _repository = [factory createSpendingModelRepository];
+    _items = [NSMutableArray arrayWithArray:[_repository getAll]];
 }
 
 #pragma mark - Public methods

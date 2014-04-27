@@ -20,8 +20,6 @@
 		8106C6D518D47E3000963219 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8106C6D318D47E3000963219 /* InfoPlist.strings */; };
 		8106C6D718D47E3000963219 /* CashSplashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106C6D618D47E3000963219 /* CashSplashTests.m */; };
 		8106C6E518D47F3100963219 /* Storyboard-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8106C6E418D47F3100963219 /* Storyboard-iPhone.storyboard */; };
-		8106C6E818D488E900963219 /* CSSaveSpendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */; };
-		810E44FA18D59E95009B526E /* CSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810E44F918D59E95009B526E /* CSDatePickerViewController.m */; };
 		812C43FF19079EA000FAF848 /* CSSpendingModelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C43FE19079EA000FAF848 /* CSSpendingModelRepository.m */; };
 		812C440219079FCD00FAF848 /* CSRepositoryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C440119079FCD00FAF848 /* CSRepositoryFactory.m */; };
 		812C44051907A05100FAF848 /* CSDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44041907A05100FAF848 /* CSDataManager.m */; };
@@ -33,13 +31,30 @@
 		812C44161907B14C00FAF848 /* CSSQLiteCategoryRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44151907B14C00FAF848 /* CSSQLiteCategoryRepository.m */; };
 		812C44191907B18000FAF848 /* CSSQLiteLabelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44181907B18000FAF848 /* CSSQLiteLabelRepository.m */; };
 		81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81374DA718D6406C00573148 /* CSSpendingModel.m */; };
+		81476A1B190CF68000CD7B0A /* CSDataSourceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 81476A1A190CF68000CD7B0A /* CSDataSourceBase.m */; };
+		81476A1E190CFC3B00CD7B0A /* CSDropboxCategoryRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 81476A1D190CFC3B00CD7B0A /* CSDropboxCategoryRepository.m */; };
+		81476A21190D008800CD7B0A /* CSDropboxLabelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 81476A20190D008800CD7B0A /* CSDropboxLabelRepository.m */; };
+		81476A24190D014400CD7B0A /* CSDropboxSpendingModelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 81476A23190D014400CD7B0A /* CSDropboxSpendingModelRepository.m */; };
+		81476A27190D118400CD7B0A /* CSDropboxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81476A26190D118400CD7B0A /* CSDropboxManager.m */; };
+		814F5DEB190BF24A004750EF /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 814F5DEA190BF24A004750EF /* Settings.plist */; };
+		814F5DEF190BF2E8004750EF /* CSSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5DEE190BF2E8004750EF /* CSSettingsManager.m */; };
+		814F5DF1190BF50D004750EF /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814F5DF0190BF50D004750EF /* Dropbox.framework */; };
+		814F5DF3190BF529004750EF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814F5DF2190BF529004750EF /* CFNetwork.framework */; };
+		814F5DF5190BF532004750EF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814F5DF4190BF532004750EF /* Security.framework */; };
+		814F5DF7190BF540004750EF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814F5DF6190BF540004750EF /* SystemConfiguration.framework */; };
+		814F5DF9190BF544004750EF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814F5DF8190BF544004750EF /* QuartzCore.framework */; };
+		814F5DFB190BF55D004750EF /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 814F5DFA190BF55D004750EF /* libc++.dylib */; };
+		814F5E02190BF6AD004750EF /* CSDropboxRepositoryFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E01190BF6AD004750EF /* CSDropboxRepositoryFactory.m */; };
+		814F5E07190BFBC6004750EF /* CSDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E04190BFBC6004750EF /* CSDatePickerViewController.m */; };
+		814F5E08190BFBC6004750EF /* CSTablePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E06190BFBC6004750EF /* CSTablePickerViewController.m */; };
+		814F5E0B190BFBD2004750EF /* CSNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E0A190BFBD2004750EF /* CSNewItemTableViewController.m */; };
+		814F5E12190BFBDF004750EF /* CSDataDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E0D190BFBDF004750EF /* CSDataDetailsTableViewController.m */; };
+		814F5E13190BFBDF004750EF /* CSDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E0F190BFBDF004750EF /* CSDataTableViewController.m */; };
+		814F5E14190BFBDF004750EF /* CSSaveSpendingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E11190BFBDF004750EF /* CSSaveSpendingTableViewController.m */; };
+		814F5E17190BFC28004750EF /* CSSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5E16190BFC28004750EF /* CSSettingsTableViewController.m */; };
 		815DE2E01909017F0018F577 /* CSCategoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 815DE2DF1909017F0018F577 /* CSCategoryDataSource.m */; };
 		815DE2E61909067C0018F577 /* CSLabelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 815DE2E51909067C0018F577 /* CSLabelDataSource.m */; };
-		81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */; };
-		816F02B2190BAC3B0048272F /* CSDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F02B1190BAC3B0048272F /* CSDataTableViewController.m */; };
 		816F02B5190BACE80048272F /* CSSpendingModelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F02B4190BACE80048272F /* CSSpendingModelDataSource.m */; };
-		816F02BB190BB8680048272F /* CSDataDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F02BA190BB8680048272F /* CSDataDetailsTableViewController.m */; };
-		818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */; };
 		81CD0F77190A501E003D21E2 /* CSInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CD0F76190A501E003D21E2 /* CSInfoView.m */; };
 /* End PBXBuildFile section */
 
@@ -71,10 +86,6 @@
 		8106C6D418D47E3000963219 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8106C6D618D47E3000963219 /* CashSplashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CashSplashTests.m; sourceTree = "<group>"; };
 		8106C6E418D47F3100963219 /* Storyboard-iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Storyboard-iPhone.storyboard"; path = "UI/Storyboard-iPhone.storyboard"; sourceTree = "<group>"; };
-		8106C6E618D488E900963219 /* CSSaveSpendingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSaveSpendingTableViewController.h; path = UI/CSSaveSpendingTableViewController.h; sourceTree = "<group>"; };
-		8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSaveSpendingTableViewController.m; path = UI/CSSaveSpendingTableViewController.m; sourceTree = "<group>"; };
-		810E44F818D59E95009B526E /* CSDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDatePickerViewController.h; path = UI/CSDatePickerViewController.h; sourceTree = "<group>"; };
-		810E44F918D59E95009B526E /* CSDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDatePickerViewController.m; path = UI/CSDatePickerViewController.m; sourceTree = "<group>"; };
 		812C43FD19079EA000FAF848 /* CSSpendingModelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSpendingModelRepository.h; path = Data/Interface/CSSpendingModelRepository.h; sourceTree = "<group>"; };
 		812C43FE19079EA000FAF848 /* CSSpendingModelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModelRepository.m; path = Data/Interface/CSSpendingModelRepository.m; sourceTree = "<group>"; };
 		812C440019079FCD00FAF848 /* CSRepositoryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSRepositoryFactory.h; path = Data/Interface/CSRepositoryFactory.h; sourceTree = "<group>"; };
@@ -96,20 +107,47 @@
 		812C44181907B18000FAF848 /* CSSQLiteLabelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSQLiteLabelRepository.m; path = Data/SQLite/CSSQLiteLabelRepository.m; sourceTree = "<group>"; };
 		81374DA618D6406C00573148 /* CSSpendingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSpendingModel.h; path = Model/CSSpendingModel.h; sourceTree = "<group>"; };
 		81374DA718D6406C00573148 /* CSSpendingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModel.m; path = Model/CSSpendingModel.m; sourceTree = "<group>"; };
+		81476A19190CF68000CD7B0A /* CSDataSourceBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataSourceBase.h; path = Data/DataSource/CSDataSourceBase.h; sourceTree = "<group>"; };
+		81476A1A190CF68000CD7B0A /* CSDataSourceBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataSourceBase.m; path = Data/DataSource/CSDataSourceBase.m; sourceTree = "<group>"; };
+		81476A1C190CFC3B00CD7B0A /* CSDropboxCategoryRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDropboxCategoryRepository.h; path = Data/Dropbox/CSDropboxCategoryRepository.h; sourceTree = "<group>"; };
+		81476A1D190CFC3B00CD7B0A /* CSDropboxCategoryRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDropboxCategoryRepository.m; path = Data/Dropbox/CSDropboxCategoryRepository.m; sourceTree = "<group>"; };
+		81476A1F190D008800CD7B0A /* CSDropboxLabelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDropboxLabelRepository.h; path = Data/Dropbox/CSDropboxLabelRepository.h; sourceTree = "<group>"; };
+		81476A20190D008800CD7B0A /* CSDropboxLabelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDropboxLabelRepository.m; path = Data/Dropbox/CSDropboxLabelRepository.m; sourceTree = "<group>"; };
+		81476A22190D014400CD7B0A /* CSDropboxSpendingModelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDropboxSpendingModelRepository.h; path = Data/Dropbox/CSDropboxSpendingModelRepository.h; sourceTree = "<group>"; };
+		81476A23190D014400CD7B0A /* CSDropboxSpendingModelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDropboxSpendingModelRepository.m; path = Data/Dropbox/CSDropboxSpendingModelRepository.m; sourceTree = "<group>"; };
+		81476A25190D118400CD7B0A /* CSDropboxManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDropboxManager.h; path = Data/Dropbox/CSDropboxManager.h; sourceTree = "<group>"; };
+		81476A26190D118400CD7B0A /* CSDropboxManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDropboxManager.m; path = Data/Dropbox/CSDropboxManager.m; sourceTree = "<group>"; };
+		814F5DEA190BF24A004750EF /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		814F5DED190BF2E8004750EF /* CSSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSettingsManager.h; path = Util/CSSettingsManager.h; sourceTree = "<group>"; };
+		814F5DEE190BF2E8004750EF /* CSSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSettingsManager.m; path = Util/CSSettingsManager.m; sourceTree = "<group>"; };
+		814F5DF0190BF50D004750EF /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		814F5DF2190BF529004750EF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		814F5DF4190BF532004750EF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		814F5DF6190BF540004750EF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		814F5DF8190BF544004750EF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		814F5DFA190BF55D004750EF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		814F5E00190BF6AD004750EF /* CSDropboxRepositoryFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDropboxRepositoryFactory.h; path = Data/Dropbox/CSDropboxRepositoryFactory.h; sourceTree = "<group>"; };
+		814F5E01190BF6AD004750EF /* CSDropboxRepositoryFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDropboxRepositoryFactory.m; path = Data/Dropbox/CSDropboxRepositoryFactory.m; sourceTree = "<group>"; };
+		814F5E03190BFBC6004750EF /* CSDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDatePickerViewController.h; path = UI/Controller/Pickers/CSDatePickerViewController.h; sourceTree = "<group>"; };
+		814F5E04190BFBC6004750EF /* CSDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDatePickerViewController.m; path = UI/Controller/Pickers/CSDatePickerViewController.m; sourceTree = "<group>"; };
+		814F5E05190BFBC6004750EF /* CSTablePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTablePickerViewController.h; path = UI/Controller/Pickers/CSTablePickerViewController.h; sourceTree = "<group>"; };
+		814F5E06190BFBC6004750EF /* CSTablePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTablePickerViewController.m; path = UI/Controller/Pickers/CSTablePickerViewController.m; sourceTree = "<group>"; };
+		814F5E09190BFBD2004750EF /* CSNewItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSNewItemTableViewController.h; path = UI/Controller/Data/CSNewItemTableViewController.h; sourceTree = "<group>"; };
+		814F5E0A190BFBD2004750EF /* CSNewItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSNewItemTableViewController.m; path = UI/Controller/Data/CSNewItemTableViewController.m; sourceTree = "<group>"; };
+		814F5E0C190BFBDE004750EF /* CSDataDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataDetailsTableViewController.h; path = UI/Controller/CSDataDetailsTableViewController.h; sourceTree = "<group>"; };
+		814F5E0D190BFBDF004750EF /* CSDataDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataDetailsTableViewController.m; path = UI/Controller/CSDataDetailsTableViewController.m; sourceTree = "<group>"; };
+		814F5E0E190BFBDF004750EF /* CSDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataTableViewController.h; path = UI/Controller/CSDataTableViewController.h; sourceTree = "<group>"; };
+		814F5E0F190BFBDF004750EF /* CSDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataTableViewController.m; path = UI/Controller/CSDataTableViewController.m; sourceTree = "<group>"; };
+		814F5E10190BFBDF004750EF /* CSSaveSpendingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSaveSpendingTableViewController.h; path = UI/Controller/CSSaveSpendingTableViewController.h; sourceTree = "<group>"; };
+		814F5E11190BFBDF004750EF /* CSSaveSpendingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSaveSpendingTableViewController.m; path = UI/Controller/CSSaveSpendingTableViewController.m; sourceTree = "<group>"; };
+		814F5E15190BFC28004750EF /* CSSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSettingsTableViewController.h; path = UI/Controller/CSSettingsTableViewController.h; sourceTree = "<group>"; };
+		814F5E16190BFC28004750EF /* CSSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSettingsTableViewController.m; path = UI/Controller/CSSettingsTableViewController.m; sourceTree = "<group>"; };
 		815DE2DE1909017F0018F577 /* CSCategoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSCategoryDataSource.h; path = Data/DataSource/CSCategoryDataSource.h; sourceTree = "<group>"; };
 		815DE2DF1909017F0018F577 /* CSCategoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSCategoryDataSource.m; path = Data/DataSource/CSCategoryDataSource.m; sourceTree = "<group>"; };
 		815DE2E41909067C0018F577 /* CSLabelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSLabelDataSource.h; path = Data/DataSource/CSLabelDataSource.h; sourceTree = "<group>"; };
 		815DE2E51909067C0018F577 /* CSLabelDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSLabelDataSource.m; path = Data/DataSource/CSLabelDataSource.m; sourceTree = "<group>"; };
-		81636D9918F0755E00E3B72B /* CSTablePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTablePickerViewController.h; path = UI/CSTablePickerViewController.h; sourceTree = "<group>"; };
-		81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTablePickerViewController.m; path = UI/CSTablePickerViewController.m; sourceTree = "<group>"; };
-		816F02B0190BAC3B0048272F /* CSDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataTableViewController.h; path = UI/CSDataTableViewController.h; sourceTree = "<group>"; };
-		816F02B1190BAC3B0048272F /* CSDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataTableViewController.m; path = UI/CSDataTableViewController.m; sourceTree = "<group>"; };
 		816F02B3190BACE80048272F /* CSSpendingModelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSpendingModelDataSource.h; path = Data/DataSource/CSSpendingModelDataSource.h; sourceTree = "<group>"; };
 		816F02B4190BACE80048272F /* CSSpendingModelDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModelDataSource.m; path = Data/DataSource/CSSpendingModelDataSource.m; sourceTree = "<group>"; };
-		816F02B9190BB8680048272F /* CSDataDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataDetailsTableViewController.h; path = UI/CSDataDetailsTableViewController.h; sourceTree = "<group>"; };
-		816F02BA190BB8680048272F /* CSDataDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataDetailsTableViewController.m; path = UI/CSDataDetailsTableViewController.m; sourceTree = "<group>"; };
-		818F010C18D5C2C60050C24E /* CSNewItemTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSNewItemTableViewController.h; path = UI/CSNewItemTableViewController.h; sourceTree = "<group>"; };
-		818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSNewItemTableViewController.m; path = UI/CSNewItemTableViewController.m; sourceTree = "<group>"; };
 		81CD0F75190A501E003D21E2 /* CSInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSInfoView.h; path = UI/Component/CSInfoView.h; sourceTree = "<group>"; };
 		81CD0F76190A501E003D21E2 /* CSInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSInfoView.m; path = UI/Component/CSInfoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,8 +157,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				814F5DFB190BF55D004750EF /* libc++.dylib in Frameworks */,
+				814F5DF9190BF544004750EF /* QuartzCore.framework in Frameworks */,
+				814F5DF7190BF540004750EF /* SystemConfiguration.framework in Frameworks */,
+				814F5DF5190BF532004750EF /* Security.framework in Frameworks */,
+				814F5DF3190BF529004750EF /* CFNetwork.framework in Frameworks */,
 				812C440D1907A26A00FAF848 /* libsqlite3.dylib in Frameworks */,
 				8106C6B418D47E2F00963219 /* CoreGraphics.framework in Frameworks */,
+				814F5DF1190BF50D004750EF /* Dropbox.framework in Frameworks */,
 				8106C6B618D47E2F00963219 /* UIKit.framework in Frameworks */,
 				8106C6B218D47E2F00963219 /* Foundation.framework in Frameworks */,
 			);
@@ -161,9 +205,15 @@
 		8106C6B018D47E2F00963219 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				812C440C1907A26A00FAF848 /* libsqlite3.dylib */,
-				8106C6B118D47E2F00963219 /* Foundation.framework */,
+				814F5DF2190BF529004750EF /* CFNetwork.framework */,
 				8106C6B318D47E2F00963219 /* CoreGraphics.framework */,
+				814F5DF0190BF50D004750EF /* Dropbox.framework */,
+				8106C6B118D47E2F00963219 /* Foundation.framework */,
+				814F5DFA190BF55D004750EF /* libc++.dylib */,
+				812C440C1907A26A00FAF848 /* libsqlite3.dylib */,
+				814F5DF8190BF544004750EF /* QuartzCore.framework */,
+				814F5DF4190BF532004750EF /* Security.framework */,
+				814F5DF6190BF540004750EF /* SystemConfiguration.framework */,
 				8106C6B518D47E2F00963219 /* UIKit.framework */,
 				8106C6CA18D47E3000963219 /* XCTest.framework */,
 			);
@@ -176,6 +226,7 @@
 				812C43FA19079E1100FAF848 /* Data */,
 				8106C6E118D47EF400963219 /* Model */,
 				8106C6E018D47EEE00963219 /* UI */,
+				814F5DEC190BF2C8004750EF /* Util */,
 				8106C6C018D47E2F00963219 /* CSAppDelegate.h */,
 				8106C6C118D47E2F00963219 /* CSAppDelegate.m */,
 				8106C6C318D47E2F00963219 /* Images.xcassets */,
@@ -188,9 +239,10 @@
 			isa = PBXGroup;
 			children = (
 				8106C6B918D47E2F00963219 /* CashSplash-Info.plist */,
+				8106C6BF18D47E2F00963219 /* CashSplash-Prefix.pch */,
 				8106C6BA18D47E2F00963219 /* InfoPlist.strings */,
 				8106C6BD18D47E2F00963219 /* main.m */,
-				8106C6BF18D47E2F00963219 /* CashSplash-Prefix.pch */,
+				814F5DEA190BF24A004750EF /* Settings.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -237,12 +289,14 @@
 			children = (
 				81636D9C18F07A4300E3B72B /* Data */,
 				810E44EA18D59487009B526E /* Pickers */,
-				8106C6E618D488E900963219 /* CSSaveSpendingTableViewController.h */,
-				8106C6E718D488E900963219 /* CSSaveSpendingTableViewController.m */,
-				816F02B0190BAC3B0048272F /* CSDataTableViewController.h */,
-				816F02B1190BAC3B0048272F /* CSDataTableViewController.m */,
-				816F02B9190BB8680048272F /* CSDataDetailsTableViewController.h */,
-				816F02BA190BB8680048272F /* CSDataDetailsTableViewController.m */,
+				814F5E0C190BFBDE004750EF /* CSDataDetailsTableViewController.h */,
+				814F5E0D190BFBDF004750EF /* CSDataDetailsTableViewController.m */,
+				814F5E0E190BFBDF004750EF /* CSDataTableViewController.h */,
+				814F5E0F190BFBDF004750EF /* CSDataTableViewController.m */,
+				814F5E10190BFBDF004750EF /* CSSaveSpendingTableViewController.h */,
+				814F5E11190BFBDF004750EF /* CSSaveSpendingTableViewController.m */,
+				814F5E15190BFC28004750EF /* CSSettingsTableViewController.h */,
+				814F5E16190BFC28004750EF /* CSSettingsTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -250,10 +304,10 @@
 		810E44EA18D59487009B526E /* Pickers */ = {
 			isa = PBXGroup;
 			children = (
-				810E44F818D59E95009B526E /* CSDatePickerViewController.h */,
-				810E44F918D59E95009B526E /* CSDatePickerViewController.m */,
-				81636D9918F0755E00E3B72B /* CSTablePickerViewController.h */,
-				81636D9A18F0755E00E3B72B /* CSTablePickerViewController.m */,
+				814F5E03190BFBC6004750EF /* CSDatePickerViewController.h */,
+				814F5E04190BFBC6004750EF /* CSDatePickerViewController.m */,
+				814F5E05190BFBC6004750EF /* CSTablePickerViewController.h */,
+				814F5E06190BFBC6004750EF /* CSTablePickerViewController.m */,
 			);
 			name = Pickers;
 			sourceTree = "<group>";
@@ -262,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				815DE2DD190901610018F577 /* DataSource */,
+				814F5DFC190BF66A004750EF /* Dropbox */,
 				812C43FC19079E7400FAF848 /* Interface */,
 				812C43FB19079E5A00FAF848 /* SQLite */,
 				812C44031907A05100FAF848 /* CSDataManager.h */,
@@ -300,11 +355,39 @@
 			name = Interface;
 			sourceTree = "<group>";
 		};
+		814F5DEC190BF2C8004750EF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				814F5DED190BF2E8004750EF /* CSSettingsManager.h */,
+				814F5DEE190BF2E8004750EF /* CSSettingsManager.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		814F5DFC190BF66A004750EF /* Dropbox */ = {
+			isa = PBXGroup;
+			children = (
+				81476A1C190CFC3B00CD7B0A /* CSDropboxCategoryRepository.h */,
+				81476A1D190CFC3B00CD7B0A /* CSDropboxCategoryRepository.m */,
+				81476A1F190D008800CD7B0A /* CSDropboxLabelRepository.h */,
+				81476A20190D008800CD7B0A /* CSDropboxLabelRepository.m */,
+				814F5E00190BF6AD004750EF /* CSDropboxRepositoryFactory.h */,
+				814F5E01190BF6AD004750EF /* CSDropboxRepositoryFactory.m */,
+				81476A22190D014400CD7B0A /* CSDropboxSpendingModelRepository.h */,
+				81476A23190D014400CD7B0A /* CSDropboxSpendingModelRepository.m */,
+				81476A25190D118400CD7B0A /* CSDropboxManager.h */,
+				81476A26190D118400CD7B0A /* CSDropboxManager.m */,
+			);
+			name = Dropbox;
+			sourceTree = "<group>";
+		};
 		815DE2DD190901610018F577 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
 				815DE2DE1909017F0018F577 /* CSCategoryDataSource.h */,
 				815DE2DF1909017F0018F577 /* CSCategoryDataSource.m */,
+				81476A19190CF68000CD7B0A /* CSDataSourceBase.h */,
+				81476A1A190CF68000CD7B0A /* CSDataSourceBase.m */,
 				815DE2E41909067C0018F577 /* CSLabelDataSource.h */,
 				815DE2E51909067C0018F577 /* CSLabelDataSource.m */,
 				816F02B3190BACE80048272F /* CSSpendingModelDataSource.h */,
@@ -316,8 +399,8 @@
 		81636D9C18F07A4300E3B72B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				818F010C18D5C2C60050C24E /* CSNewItemTableViewController.h */,
-				818F010D18D5C2C60050C24E /* CSNewItemTableViewController.m */,
+				814F5E09190BFBD2004750EF /* CSNewItemTableViewController.h */,
+				814F5E0A190BFBD2004750EF /* CSNewItemTableViewController.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -411,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8106C6E518D47F3100963219 /* Storyboard-iPhone.storyboard in Resources */,
+				814F5DEB190BF24A004750EF /* Settings.plist in Resources */,
 				8106C6BC18D47E2F00963219 /* InfoPlist.strings in Resources */,
 				8106C6C418D47E2F00963219 /* Images.xcassets in Resources */,
 			);
@@ -431,28 +515,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8106C6E818D488E900963219 /* CSSaveSpendingTableViewController.m in Sources */,
 				812C440219079FCD00FAF848 /* CSRepositoryFactory.m in Sources */,
 				812C44131907AFA300FAF848 /* CSLabelRepository.m in Sources */,
-				810E44FA18D59E95009B526E /* CSDatePickerViewController.m in Sources */,
 				812C440B1907A1BB00FAF848 /* CSSQLiteSpendingModelRepository.m in Sources */,
 				816F02B5190BACE80048272F /* CSSpendingModelDataSource.m in Sources */,
-				816F02BB190BB8680048272F /* CSDataDetailsTableViewController.m in Sources */,
+				814F5E07190BFBC6004750EF /* CSDatePickerViewController.m in Sources */,
 				812C44101907AF6E00FAF848 /* CSCategoryRepository.m in Sources */,
+				814F5E12190BFBDF004750EF /* CSDataDetailsTableViewController.m in Sources */,
+				814F5E13190BFBDF004750EF /* CSDataTableViewController.m in Sources */,
 				8106C6C218D47E2F00963219 /* CSAppDelegate.m in Sources */,
 				812C44081907A11F00FAF848 /* CSSQLiteRepositoryFactory.m in Sources */,
-				818F010E18D5C2C60050C24E /* CSNewItemTableViewController.m in Sources */,
-				81636D9B18F0755E00E3B72B /* CSTablePickerViewController.m in Sources */,
 				815DE2E01909017F0018F577 /* CSCategoryDataSource.m in Sources */,
+				814F5E17190BFC28004750EF /* CSSettingsTableViewController.m in Sources */,
 				815DE2E61909067C0018F577 /* CSLabelDataSource.m in Sources */,
+				81476A21190D008800CD7B0A /* CSDropboxLabelRepository.m in Sources */,
+				81476A27190D118400CD7B0A /* CSDropboxManager.m in Sources */,
 				812C44161907B14C00FAF848 /* CSSQLiteCategoryRepository.m in Sources */,
 				812C43FF19079EA000FAF848 /* CSSpendingModelRepository.m in Sources */,
 				812C44191907B18000FAF848 /* CSSQLiteLabelRepository.m in Sources */,
 				8106C6BE18D47E2F00963219 /* main.m in Sources */,
+				81476A1E190CFC3B00CD7B0A /* CSDropboxCategoryRepository.m in Sources */,
+				814F5DEF190BF2E8004750EF /* CSSettingsManager.m in Sources */,
+				814F5E02190BF6AD004750EF /* CSDropboxRepositoryFactory.m in Sources */,
+				81476A24190D014400CD7B0A /* CSDropboxSpendingModelRepository.m in Sources */,
+				81476A1B190CF68000CD7B0A /* CSDataSourceBase.m in Sources */,
+				814F5E14190BFBDF004750EF /* CSSaveSpendingTableViewController.m in Sources */,
+				814F5E08190BFBC6004750EF /* CSTablePickerViewController.m in Sources */,
 				81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */,
-				816F02B2190BAC3B0048272F /* CSDataTableViewController.m in Sources */,
 				812C44051907A05100FAF848 /* CSDataManager.m in Sources */,
 				81CD0F77190A501E003D21E2 /* CSInfoView.m in Sources */,
+				814F5E0B190BFBD2004750EF /* CSNewItemTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +664,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CashSplash/CashSplash-Prefix.pch";
 				INFOPLIST_FILE = "CashSplash/CashSplash-Info.plist";
@@ -587,6 +683,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CashSplash/CashSplash-Prefix.pch";
 				INFOPLIST_FILE = "CashSplash/CashSplash-Info.plist";

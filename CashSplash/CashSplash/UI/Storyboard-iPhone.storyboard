@@ -18,13 +18,14 @@
                     <connections>
                         <segue destination="Xq7-3V-19P" kind="relationship" relationship="viewControllers" id="Ute-iO-pIV"/>
                         <segue destination="pcU-Ml-C2X" kind="relationship" relationship="viewControllers" id="pjf-q7-cd6"/>
+                        <segue destination="Qn9-oR-5Ku" kind="relationship" relationship="viewControllers" id="nOz-Bq-SmL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQd-5C-WBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="253" y="602"/>
         </scene>
-        <!--Save Spending Table View Controller - Spend-->
+        <!--Save Spending Table View Controller - Payment-->
         <scene sceneID="wl1-bZ-mUz">
             <objects>
                 <tableViewController id="bfU-5Q-De8" customClass="CSSaveSpendingTableViewController" sceneMemberID="viewController">
@@ -166,7 +167,7 @@
                             <outlet property="delegate" destination="bfU-5Q-De8" id="LkO-aF-bYR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Spend" id="wJI-27-2q9">
+                    <navigationItem key="navigationItem" title="Payment" id="wJI-27-2q9">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Du1-Kr-Q48">
                             <connections>
                                 <action selector="saveTapped:" destination="bfU-5Q-De8" id="TQs-02-RI1"/>
@@ -654,10 +655,68 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="1115" y="1000"/>
         </scene>
+        <!--Settings Table View Controller - Settings-->
+        <scene sceneID="PbA-7T-joe">
+            <objects>
+                <tableViewController id="Qn9-oR-5Ku" customClass="CSSettingsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="T4Z-F2-CEJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="STORAGE" id="x3z-ea-T5u">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="KQN-97-Ryp">
+                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KQN-97-Ryp" id="ueE-eD-Mc2">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uGh-Dd-Yox">
+                                                    <rect key="frame" x="251" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="useDropboxChanged:" destination="Qn9-oR-5Ku" eventType="valueChanged" id="VxJ-bP-wVl"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use Dropbox" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mx-Rf-cm7">
+                                                    <rect key="frame" x="57" y="11" width="139" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dropbox-logos_dropbox-glyph-blue" translatesAutoresizingMaskIntoConstraints="NO" id="xHZ-be-p7Z">
+                                                    <rect key="frame" x="5" y="0.0" width="44" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Qn9-oR-5Ku" id="zFF-mB-yXt"/>
+                            <outlet property="delegate" destination="Qn9-oR-5Ku" id="TQT-kK-o9J"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings-tab-icon" id="xW5-s2-Uu8"/>
+                    <connections>
+                        <outlet property="useDropboxSwitch" destination="uGh-Dd-Yox" id="zmd-11-11q"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="akt-ew-w45" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1115" y="1826"/>
+        </scene>
     </scenes>
     <resources>
         <image name="data-tab-icon" width="25" height="25"/>
+        <image name="dropbox-logos_dropbox-glyph-blue" width="85" height="85"/>
         <image name="payment-tab-icon" width="25" height="25"/>
+        <image name="settings-tab-icon" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

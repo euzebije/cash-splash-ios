@@ -15,5 +15,6 @@
 + (CSDataManager *)sharedManager;
 
 - (CSRepositoryFactory *)repositoryFactory;
+- (void)reload;
 
 @end
