@@ -33,6 +33,10 @@
         {
             _datastore = nil;
         }
+        else
+        {
+            [_datastore sync:nil];
+        }
     }
     return self;
 }

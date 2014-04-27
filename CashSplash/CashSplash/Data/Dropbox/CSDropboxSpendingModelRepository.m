@@ -8,6 +8,7 @@
 
 #import "CSDropboxSpendingModelRepository.h"
 #import "CSSpendingModel.h"
+#import "CSDropboxManager.h"
 
 #define kTableName  @"spending_model"
 
@@ -39,6 +40,7 @@
 {
     if (_table)
     {
+        [CSDropboxManager syncDatastore:_datastore];
         DBError *error = nil;
         NSArray *data = [_table query:nil error:&error];
         
@@ -63,6 +65,7 @@
 {
     if (_table)
     {
+        [CSDropboxManager syncDatastore:_datastore];
         DBError *error = nil;
         
         NSArray *records = [_table query:@{@"key": key} error:&error];

@@ -7,6 +7,7 @@
 //
 
 #import "CSDropboxCategoryRepository.h"
+#import "CSDropboxManager.h"
 
 #define kTableName  @"category"
 
@@ -38,6 +39,7 @@
 {
     if (_table)
     {
+        [CSDropboxManager syncDatastore:_datastore];
         DBError *error = nil;
         NSArray *data = [_table query:nil error:&error];
         
