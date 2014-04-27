@@ -71,16 +71,20 @@
     
     if ([repository save:model])
     {
-        self.amountTextField.text = @"";
-        _category = @"";
-        self.categoryLabel.text = @"";
-        _label = @"";
-        self.labelLabel.text = @"";
-        [self setDate:[NSDate date]];
-        self.noteTextField.text = @"";
-        
+        [self clear];
         [CSInfoView animateWithDuration:1.0f fadeDuration:0.3f text:@"Got it!" containerView:self.view];
     }
+}
+
+- (void)clear
+{
+    self.amountTextField.text = @"";
+    _category = @"";
+    self.categoryLabel.text = @"";
+    _label = @"";
+    self.labelLabel.text = @"";
+    [self setDate:[NSDate date]];
+    self.noteTextField.text = @"";
 }
 
 #pragma mark - CSTablePickerDelegate
@@ -109,6 +113,19 @@
 {
     _date = date;
     self.dateLabel.text = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
+}
+
+#pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section == 2 && indexPath.row == 0)
+    {
+        // Clear button
+        [self clear];
+    }
 }
 
 #pragma mark - Segue

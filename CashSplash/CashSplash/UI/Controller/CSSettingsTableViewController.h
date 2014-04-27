@@ -11,6 +11,7 @@
 @interface CSSettingsTableViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UISwitch *useDropboxSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 
 - (IBAction)useDropboxChanged:(id)sender;
 

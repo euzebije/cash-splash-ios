@@ -25,6 +25,8 @@
         [self.useDropboxSwitch setOn:account.linked];
         [self.tableView reloadData];
     }];
+    
+    self.versionLabel.text = settings.appVersion;
 }
 
 #pragma mark - Dropbox
@@ -48,6 +50,7 @@
         else
         {
             [manager linkFromController:self];
+            [self.useDropboxSwitch setOn:NO];
         }
     }
     else
