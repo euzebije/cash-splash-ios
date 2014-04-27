@@ -29,6 +29,11 @@
     if (account)
     {
         NSLog(@"Dropbox successfully enabled");
+        CSSettingsManager *settings = [CSSettingsManager sharedManager];
+        settings.useDropbox = YES;
+        [settings sync];
+        [[CSDataManager sharedManager] reload];
+        
         return YES;
     }
     return NO;
@@ -43,12 +48,12 @@
 {
     [[DBAccountManager sharedManager] addObserver:self block:^(DBAccount *account) {
         CSSettingsManager *settings = [CSSettingsManager sharedManager];
-        settings.useDropbox = account.linked;
-        [settings sync];
-        [[CSDataManager sharedManager] reload];
-        
-        if (!account.linked)
+        if (settings.useDropbox && !account.linked)
         {
+            settings.useDropbox = NO;
+            [settings sync];
+            [[CSDataManager sharedManager] reload];
+            
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Dropbox" message:@"Cash splash was unlinked from Dropbox. Switched to local storage." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alertView show];
         }

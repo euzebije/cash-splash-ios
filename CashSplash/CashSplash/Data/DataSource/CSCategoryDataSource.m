@@ -18,16 +18,23 @@
     NSMutableArray *_items;
 }
 
+#pragma mark - Init
+
 - (instancetype)init
 {
     self = [super init];
     if (self)
     {
-        CSRepositoryFactory *factory = [[CSDataManager sharedManager] repositoryFactory];
-        _repository = [factory createCategoryRepository];
-        _items = [NSMutableArray arrayWithArray:[_repository getAll]];
+        [self reload];
     }
     return self;
+}
+
+- (void)reload
+{
+    CSRepositoryFactory *factory = [[CSDataManager sharedManager] repositoryFactory];
+    _repository = [factory createCategoryRepository];
+    _items = [NSMutableArray arrayWithArray:[_repository getAll]];
 }
 
 #pragma mark - CSTablePickerDatasource

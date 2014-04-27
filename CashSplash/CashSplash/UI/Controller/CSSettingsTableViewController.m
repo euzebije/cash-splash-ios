@@ -23,8 +23,7 @@
     
     [[DBAccountManager sharedManager] addObserver:self block:^(DBAccount *account) {
         [self.useDropboxSwitch setOn:account.linked];
-        [self useDropboxChanged:self.useDropboxSwitch];
-        [[CSDataManager sharedManager] reload];
+        [self.tableView reloadData];
     }];
 }
 
@@ -44,6 +43,7 @@
             settings.useDropbox = YES;
             [settings sync];
             [self.tableView reloadData];
+            [[CSDataManager sharedManager] reload];
         }
         else
         {
@@ -55,6 +55,7 @@
         settings.useDropbox = NO;
         [settings sync];
         [self.tableView reloadData];
+        [[CSDataManager sharedManager] reload];
     }
 }
 
@@ -65,7 +66,7 @@
     if (section == 0)
     {
         // Storage section
-        if ([[CSSettingsManager sharedManager] useDropbox])
+        if (self.useDropboxSwitch.isOn)
         {
             return @"Using Dropbox";
         }

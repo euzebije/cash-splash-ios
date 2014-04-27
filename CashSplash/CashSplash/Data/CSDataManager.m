@@ -43,6 +43,7 @@
 - (void)reload
 {
     _repositoryFactory = nil;
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationStorageChanged object:self userInfo:nil];
 }
 
 #pragma mark - Private methods

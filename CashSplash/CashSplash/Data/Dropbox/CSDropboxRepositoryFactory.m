@@ -20,9 +20,7 @@
     self = [super init];
     if (self)
     {
-        CSSettingsManager *settings = [CSSettingsManager sharedManager];
-        DBAccountManager *accountManager = [[DBAccountManager alloc] initWithAppKey:settings.dropBoxAppKey secret:settings.dropBoxAppSecret];
-        [DBAccountManager setSharedManager:accountManager];
+        
     }
     return self;
 }

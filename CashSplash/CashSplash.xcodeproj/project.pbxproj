@@ -31,6 +31,7 @@
 		812C44161907B14C00FAF848 /* CSSQLiteCategoryRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44151907B14C00FAF848 /* CSSQLiteCategoryRepository.m */; };
 		812C44191907B18000FAF848 /* CSSQLiteLabelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44181907B18000FAF848 /* CSSQLiteLabelRepository.m */; };
 		81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81374DA718D6406C00573148 /* CSSpendingModel.m */; };
+		81476A1B190CF68000CD7B0A /* CSDataSourceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 81476A1A190CF68000CD7B0A /* CSDataSourceBase.m */; };
 		814F5DEB190BF24A004750EF /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 814F5DEA190BF24A004750EF /* Settings.plist */; };
 		814F5DEF190BF2E8004750EF /* CSSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5DEE190BF2E8004750EF /* CSSettingsManager.m */; };
 		814F5DF1190BF50D004750EF /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814F5DF0190BF50D004750EF /* Dropbox.framework */; };
@@ -102,6 +103,8 @@
 		812C44181907B18000FAF848 /* CSSQLiteLabelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSQLiteLabelRepository.m; path = Data/SQLite/CSSQLiteLabelRepository.m; sourceTree = "<group>"; };
 		81374DA618D6406C00573148 /* CSSpendingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSpendingModel.h; path = Model/CSSpendingModel.h; sourceTree = "<group>"; };
 		81374DA718D6406C00573148 /* CSSpendingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModel.m; path = Model/CSSpendingModel.m; sourceTree = "<group>"; };
+		81476A19190CF68000CD7B0A /* CSDataSourceBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataSourceBase.h; path = Data/DataSource/CSDataSourceBase.h; sourceTree = "<group>"; };
+		81476A1A190CF68000CD7B0A /* CSDataSourceBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataSourceBase.m; path = Data/DataSource/CSDataSourceBase.m; sourceTree = "<group>"; };
 		814F5DEA190BF24A004750EF /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		814F5DED190BF2E8004750EF /* CSSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSettingsManager.h; path = Util/CSSettingsManager.h; sourceTree = "<group>"; };
 		814F5DEE190BF2E8004750EF /* CSSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSettingsManager.m; path = Util/CSSettingsManager.m; sourceTree = "<group>"; };
@@ -363,6 +366,8 @@
 			children = (
 				815DE2DE1909017F0018F577 /* CSCategoryDataSource.h */,
 				815DE2DF1909017F0018F577 /* CSCategoryDataSource.m */,
+				81476A19190CF68000CD7B0A /* CSDataSourceBase.h */,
+				81476A1A190CF68000CD7B0A /* CSDataSourceBase.m */,
 				815DE2E41909067C0018F577 /* CSLabelDataSource.h */,
 				815DE2E51909067C0018F577 /* CSLabelDataSource.m */,
 				816F02B3190BACE80048272F /* CSSpendingModelDataSource.h */,
@@ -509,6 +514,7 @@
 				8106C6BE18D47E2F00963219 /* main.m in Sources */,
 				814F5DEF190BF2E8004750EF /* CSSettingsManager.m in Sources */,
 				814F5E02190BF6AD004750EF /* CSDropboxRepositoryFactory.m in Sources */,
+				81476A1B190CF68000CD7B0A /* CSDataSourceBase.m in Sources */,
 				814F5E14190BFBDF004750EF /* CSSaveSpendingTableViewController.m in Sources */,
 				814F5E08190BFBC6004750EF /* CSTablePickerViewController.m in Sources */,
 				81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */,
