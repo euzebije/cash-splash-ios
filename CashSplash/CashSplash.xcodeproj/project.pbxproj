@@ -32,6 +32,9 @@
 		812C44191907B18000FAF848 /* CSSQLiteLabelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 812C44181907B18000FAF848 /* CSSQLiteLabelRepository.m */; };
 		81374DA818D6406C00573148 /* CSSpendingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 81374DA718D6406C00573148 /* CSSpendingModel.m */; };
 		81476A1B190CF68000CD7B0A /* CSDataSourceBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 81476A1A190CF68000CD7B0A /* CSDataSourceBase.m */; };
+		81476A1E190CFC3B00CD7B0A /* CSDropboxCategoryRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 81476A1D190CFC3B00CD7B0A /* CSDropboxCategoryRepository.m */; };
+		81476A21190D008800CD7B0A /* CSDropboxLabelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 81476A20190D008800CD7B0A /* CSDropboxLabelRepository.m */; };
+		81476A24190D014400CD7B0A /* CSDropboxSpendingModelRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 81476A23190D014400CD7B0A /* CSDropboxSpendingModelRepository.m */; };
 		814F5DEB190BF24A004750EF /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 814F5DEA190BF24A004750EF /* Settings.plist */; };
 		814F5DEF190BF2E8004750EF /* CSSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 814F5DEE190BF2E8004750EF /* CSSettingsManager.m */; };
 		814F5DF1190BF50D004750EF /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814F5DF0190BF50D004750EF /* Dropbox.framework */; };
@@ -105,6 +108,12 @@
 		81374DA718D6406C00573148 /* CSSpendingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSpendingModel.m; path = Model/CSSpendingModel.m; sourceTree = "<group>"; };
 		81476A19190CF68000CD7B0A /* CSDataSourceBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataSourceBase.h; path = Data/DataSource/CSDataSourceBase.h; sourceTree = "<group>"; };
 		81476A1A190CF68000CD7B0A /* CSDataSourceBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataSourceBase.m; path = Data/DataSource/CSDataSourceBase.m; sourceTree = "<group>"; };
+		81476A1C190CFC3B00CD7B0A /* CSDropboxCategoryRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDropboxCategoryRepository.h; path = Data/Dropbox/CSDropboxCategoryRepository.h; sourceTree = "<group>"; };
+		81476A1D190CFC3B00CD7B0A /* CSDropboxCategoryRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDropboxCategoryRepository.m; path = Data/Dropbox/CSDropboxCategoryRepository.m; sourceTree = "<group>"; };
+		81476A1F190D008800CD7B0A /* CSDropboxLabelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDropboxLabelRepository.h; path = Data/Dropbox/CSDropboxLabelRepository.h; sourceTree = "<group>"; };
+		81476A20190D008800CD7B0A /* CSDropboxLabelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDropboxLabelRepository.m; path = Data/Dropbox/CSDropboxLabelRepository.m; sourceTree = "<group>"; };
+		81476A22190D014400CD7B0A /* CSDropboxSpendingModelRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDropboxSpendingModelRepository.h; path = Data/Dropbox/CSDropboxSpendingModelRepository.h; sourceTree = "<group>"; };
+		81476A23190D014400CD7B0A /* CSDropboxSpendingModelRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDropboxSpendingModelRepository.m; path = Data/Dropbox/CSDropboxSpendingModelRepository.m; sourceTree = "<group>"; };
 		814F5DEA190BF24A004750EF /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		814F5DED190BF2E8004750EF /* CSSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSettingsManager.h; path = Util/CSSettingsManager.h; sourceTree = "<group>"; };
 		814F5DEE190BF2E8004750EF /* CSSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSettingsManager.m; path = Util/CSSettingsManager.m; sourceTree = "<group>"; };
@@ -355,8 +364,14 @@
 		814F5DFC190BF66A004750EF /* Dropbox */ = {
 			isa = PBXGroup;
 			children = (
+				81476A1C190CFC3B00CD7B0A /* CSDropboxCategoryRepository.h */,
+				81476A1D190CFC3B00CD7B0A /* CSDropboxCategoryRepository.m */,
+				81476A1F190D008800CD7B0A /* CSDropboxLabelRepository.h */,
+				81476A20190D008800CD7B0A /* CSDropboxLabelRepository.m */,
 				814F5E00190BF6AD004750EF /* CSDropboxRepositoryFactory.h */,
 				814F5E01190BF6AD004750EF /* CSDropboxRepositoryFactory.m */,
+				81476A22190D014400CD7B0A /* CSDropboxSpendingModelRepository.h */,
+				81476A23190D014400CD7B0A /* CSDropboxSpendingModelRepository.m */,
 			);
 			name = Dropbox;
 			sourceTree = "<group>";
@@ -508,12 +523,15 @@
 				815DE2E01909017F0018F577 /* CSCategoryDataSource.m in Sources */,
 				814F5E17190BFC28004750EF /* CSSettingsTableViewController.m in Sources */,
 				815DE2E61909067C0018F577 /* CSLabelDataSource.m in Sources */,
+				81476A21190D008800CD7B0A /* CSDropboxLabelRepository.m in Sources */,
 				812C44161907B14C00FAF848 /* CSSQLiteCategoryRepository.m in Sources */,
 				812C43FF19079EA000FAF848 /* CSSpendingModelRepository.m in Sources */,
 				812C44191907B18000FAF848 /* CSSQLiteLabelRepository.m in Sources */,
 				8106C6BE18D47E2F00963219 /* main.m in Sources */,
+				81476A1E190CFC3B00CD7B0A /* CSDropboxCategoryRepository.m in Sources */,
 				814F5DEF190BF2E8004750EF /* CSSettingsManager.m in Sources */,
 				814F5E02190BF6AD004750EF /* CSDropboxRepositoryFactory.m in Sources */,
+				81476A24190D014400CD7B0A /* CSDropboxSpendingModelRepository.m in Sources */,
 				81476A1B190CF68000CD7B0A /* CSDataSourceBase.m in Sources */,
 				814F5E14190BFBDF004750EF /* CSSaveSpendingTableViewController.m in Sources */,
 				814F5E08190BFBC6004750EF /* CSTablePickerViewController.m in Sources */,
