@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CSDataSourceBase.h"
 
-@interface CSSpendingModelDataSource : NSObject
+@interface CSSpendingModelDataSource : CSDataSourceBase
 
 - (instancetype)init;
 

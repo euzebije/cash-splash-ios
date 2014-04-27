@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CSDataSourceBase.h"
 #import "CSTablePickerViewController.h"
 
-@interface CSCategoryDataSource : NSObject <CSTablePickerDatasource>
+@interface CSCategoryDataSource : CSDataSourceBase <CSTablePickerDatasource>
 
 - (instancetype)init;
 
