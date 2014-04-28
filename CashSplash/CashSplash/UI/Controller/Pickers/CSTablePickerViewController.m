@@ -115,6 +115,10 @@
     UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     if (_selectedCell == selectedCell)
     {
+        // Tapped current selection, deselect it
+        _selectedCell.accessoryType = UITableViewCellAccessoryNone;
+        _selectedCell = nil;
+        self.selected = @"";
         return;
     }
     
