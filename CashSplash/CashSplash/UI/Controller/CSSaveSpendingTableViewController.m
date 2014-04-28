@@ -27,6 +27,8 @@
     NSDate *_date;
 }
 
+#pragma mark - Init
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -37,6 +39,8 @@
     return self;
 }
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -45,6 +49,8 @@
     _label = @"";
     [self setDate:[NSDate date]];
 }
+
+#pragma mark - Actions
 
 - (IBAction)editEnd:(id)sender
 {
@@ -88,6 +94,7 @@
 }
 
 #pragma mark - CSTablePickerDelegate
+
 - (NSString *)tablePicker:(CSTablePickerViewController *)tablePicker displayForItem:(id)item
 {
     return (NSString *)item;
