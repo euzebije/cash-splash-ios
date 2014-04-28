@@ -136,6 +136,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qgg-8t-3nM" kind="replace" identifier="settingsSegue" splitViewControllerTargetIndex="1" id="Wzw-5p-0dS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -202,7 +205,7 @@
         <scene sceneID="PUb-rz-eqr">
             <objects>
                 <tableViewController id="EEe-jd-T4I" customClass="CSNewItemTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="uKe-su-Fnl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="uKe-su-Fnl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -460,11 +463,103 @@
             </objects>
             <point key="canvasLocation" x="2294" y="-512"/>
         </scene>
+        <!--Settings Table View Controller-->
+        <scene sceneID="EYp-gf-vRr">
+            <objects>
+                <tableViewController id="qgg-8t-3nM" customClass="CSSettingsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="wqS-c7-7Oa">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="STORAGE" id="sui-7N-dfR">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="v8N-fo-Af2">
+                                        <rect key="frame" x="0.0" y="55" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v8N-fo-Af2" id="r53-Hp-96e">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropbox-logos_dropbox-glyph-blue" translatesAutoresizingMaskIntoConstraints="NO" id="kBh-lx-iFW">
+                                                    <rect key="frame" x="5" y="0.0" width="44" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="elu-uM-ABa"/>
+                                                        <constraint firstAttribute="width" constant="44" id="pmO-wA-OdM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUr-7I-Igq">
+                                                    <rect key="frame" x="57" y="6" width="634" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CvS-C3-KV5">
+                                                    <rect key="frame" x="699" y="6" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="useDropboxChanged:" destination="qgg-8t-3nM" eventType="valueChanged" id="qK6-Dy-UKb"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jUr-7I-Igq" firstAttribute="leading" secondItem="kBh-lx-iFW" secondAttribute="trailing" constant="8" id="4J1-eJ-Lu4"/>
+                                                <constraint firstItem="kBh-lx-iFW" firstAttribute="top" secondItem="r53-Hp-96e" secondAttribute="top" id="9EA-Wt-LVD"/>
+                                                <constraint firstItem="kBh-lx-iFW" firstAttribute="leading" secondItem="r53-Hp-96e" secondAttribute="leading" constant="5" id="FEy-dc-i9e"/>
+                                                <constraint firstItem="CvS-C3-KV5" firstAttribute="top" secondItem="r53-Hp-96e" secondAttribute="top" constant="6" id="KIO-lC-jb5"/>
+                                                <constraint firstAttribute="bottom" secondItem="jUr-7I-Igq" secondAttribute="bottom" constant="6" id="Yux-qx-Quh"/>
+                                                <constraint firstItem="CvS-C3-KV5" firstAttribute="leading" secondItem="jUr-7I-Igq" secondAttribute="trailing" constant="8" id="f5w-Oy-oX1"/>
+                                                <constraint firstAttribute="trailing" secondItem="CvS-C3-KV5" secondAttribute="trailing" constant="20" id="l2Z-jq-JiJ"/>
+                                                <constraint firstItem="jUr-7I-Igq" firstAttribute="top" secondItem="r53-Hp-96e" secondAttribute="top" constant="6" id="rKu-Ne-WU0"/>
+                                                <constraint firstAttribute="bottom" secondItem="CvS-C3-KV5" secondAttribute="bottom" constant="6" id="sTR-Zd-xeL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="VERSION" id="KeW-SX-XAd">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="ZR5-Yx-YNz" style="IBUITableViewCellStyleDefault" id="AOk-nr-VD8">
+                                        <rect key="frame" x="0.0" y="147" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AOk-nr-VD8" id="jiH-Il-kIT">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZR5-Yx-YNz">
+                                                    <rect key="frame" x="15" y="0.0" width="738" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="qgg-8t-3nM" id="jIl-6f-QpH"/>
+                            <outlet property="delegate" destination="qgg-8t-3nM" id="Lf6-0T-vOg"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="useDropboxSwitch" destination="CvS-C3-KV5" id="1hk-NG-mXC"/>
+                        <outlet property="versionLabel" destination="ZR5-Yx-YNz" id="fgR-dp-bDu"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1n-Ls-Uh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2294" y="1288"/>
+        </scene>
         <!--New Item Table View Controller-->
         <scene sceneID="sdQ-l7-Nzh">
             <objects>
                 <tableViewController id="0VP-k6-LGg" customClass="CSNewItemTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="hkf-OT-lqz">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="hkf-OT-lqz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -539,6 +634,9 @@
             <point key="canvasLocation" x="4279" y="-87"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dropbox-logos_dropbox-glyph-blue" width="85" height="85"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
