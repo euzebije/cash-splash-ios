@@ -34,8 +34,12 @@
     self = [super init];
     if (self)
     {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
+        NSBundle *bundle = [NSBundle mainBundle];
+        
+        NSString *path = [bundle pathForResource:@"Settings" ofType:@"plist"];
         NSDictionary *settings = [[NSDictionary alloc] initWithContentsOfFile:path];
+        
+        _appVersion = [bundle objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
         
         _dropBoxAppKey = [settings objectForKey:kDropboxAppKey];
         _dropBoxAppSecret = [settings objectForKey:kDropboxAppSecret];

@@ -18,6 +18,8 @@
 - (BOOL)save:(id)item;
 - (BOOL)remove:(id)item;
 
+- (void)refresh;
+
 @end
 
 @protocol CSTablePickerDelegate <NSObject>
@@ -33,6 +35,7 @@
 @property (nonatomic, copy) NSString *identifier;
 
 @property (nonatomic, assign) BOOL canAddItems;
+@property (nonatomic, assign) BOOL disablePicking;
 
 @property (nonatomic, retain) id<CSTablePickerDatasource> dataSource;
 @property (nonatomic, assign) id<CSTablePickerDelegate> delegate;

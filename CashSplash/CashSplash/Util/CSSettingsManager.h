@@ -16,6 +16,8 @@
 
 - (void)sync;
 
+@property (nonatomic, readonly) NSString *appVersion;
+
 @property (nonatomic, readonly) NSString *dropBoxAppKey;
 @property (nonatomic, readonly) NSString *dropBoxAppSecret;
 

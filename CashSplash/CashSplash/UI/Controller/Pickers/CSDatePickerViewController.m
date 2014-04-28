@@ -27,4 +27,9 @@
     }
 }
 
+- (CGSize)preferredContentSize
+{
+    return CGSizeMake(480, 216);
+}
+
 @end

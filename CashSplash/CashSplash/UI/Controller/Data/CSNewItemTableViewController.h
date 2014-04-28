@@ -17,6 +17,7 @@
 @interface CSNewItemTableViewController : UITableViewController
 
 @property (nonatomic, weak) id<CSNewItemDelegate> delegate;
+@property (nonatomic, weak) UIPopoverController *popover;
 
 @property (weak, nonatomic) IBOutlet UITextField *itemTextField;
 

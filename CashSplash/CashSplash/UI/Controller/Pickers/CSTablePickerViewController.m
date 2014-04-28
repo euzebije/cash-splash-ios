@@ -23,13 +23,33 @@
     {
         self.navigationItem.rightBarButtonItem = nil;
     }
+    
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh"];
+    [refresh addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refresh;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     
-    [self.delegate tablePicker:self didPickValue:self.selected];
+    if ([self.delegate respondsToSelector:@selector(tablePicker:didPickValue:)])
+    {
+        [self.delegate tablePicker:self didPickValue:self.selected];
+    }
+}
+
+- (CGSize)preferredContentSize
+{
+    return CGSizeMake(300, 300);
+}
+
+- (void)refresh
+{
+    [_dataSource refresh];
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
 }
 
 #pragma mark - Table view data source
@@ -63,6 +83,11 @@
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
     
+    if (self.disablePicking)
+    {
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    
     return cell;
 }
 
@@ -80,11 +105,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (self.disablePicking)
+    {
+        return;
+    }
+    
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
     if (_selectedCell == selectedCell)
     {
+        // Tapped current selection, deselect it
+        _selectedCell.accessoryType = UITableViewCellAccessoryNone;
+        _selectedCell = nil;
+        self.selected = @"";
         return;
     }
     
@@ -95,10 +129,17 @@
     self.selected = [[self.dataSource items] objectAtIndex:indexPath.row];
 }
 
+#pragma mark - Navigation
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     CSNewItemTableViewController *controller = segue.destinationViewController;
     controller.delegate = self;
+    
+    if ([segue.identifier isEqualToString:@"newItemPopoverSegue"])
+    {
+        controller.popover = [(UIStoryboardPopoverSegue *)segue popoverController];
+    }
 }
 
 #pragma mark - CSNewItemDelegate
