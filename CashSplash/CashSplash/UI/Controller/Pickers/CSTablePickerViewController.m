@@ -40,6 +40,11 @@
     }
 }
 
+- (CGSize)preferredContentSize
+{
+    return CGSizeMake(300, 300);
+}
+
 - (void)refresh
 {
     [_dataSource refresh];

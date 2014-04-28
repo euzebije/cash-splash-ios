@@ -18,7 +18,10 @@
 #import "CSInfoView.h"
 
 #define kCategoryIdentifier @"category"
-#define kLabelIdentifier @"label"
+#define kLabelIdentifier    @"label"
+
+#define kCategoryCellIndex  [NSIndexPath indexPathForRow:0 inSection:1]
+#define kLabelCellIndex     [NSIndexPath indexPathForRow:1 inSection:1]
 
 @implementation CSSaveSpendingTableViewController
 {
@@ -106,11 +109,13 @@
     {
         _category = value;
         self.categoryLabel.text = _category;
+        [[self.tableView cellForRowAtIndexPath:kCategoryCellIndex] setNeedsLayout];
     }
     else if ([tablePicker.identifier isEqualToString:kLabelIdentifier])
     {
         _label = value;
         self.labelLabel.text = _label;
+        [[self.tableView cellForRowAtIndexPath:kLabelCellIndex] setNeedsLayout];
     }
 }
 
