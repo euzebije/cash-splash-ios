@@ -18,7 +18,10 @@
 #import "CSInfoView.h"
 
 #define kCategoryIdentifier @"category"
-#define kLabelIdentifier @"label"
+#define kLabelIdentifier    @"label"
+
+#define kCategoryCellIndex  [NSIndexPath indexPathForRow:0 inSection:1]
+#define kLabelCellIndex     [NSIndexPath indexPathForRow:1 inSection:1]
 
 @implementation CSSaveSpendingTableViewController
 {
@@ -26,6 +29,8 @@
     NSString *_label;
     NSDate *_date;
 }
+
+#pragma mark - Init
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,6 +42,8 @@
     return self;
 }
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -45,6 +52,8 @@
     _label = @"";
     [self setDate:[NSDate date]];
 }
+
+#pragma mark - Actions
 
 - (IBAction)editEnd:(id)sender
 {
@@ -88,6 +97,7 @@
 }
 
 #pragma mark - CSTablePickerDelegate
+
 - (NSString *)tablePicker:(CSTablePickerViewController *)tablePicker displayForItem:(id)item
 {
     return (NSString *)item;
@@ -99,11 +109,13 @@
     {
         _category = value;
         self.categoryLabel.text = _category;
+        [[self.tableView cellForRowAtIndexPath:kCategoryCellIndex] setNeedsLayout];
     }
     else if ([tablePicker.identifier isEqualToString:kLabelIdentifier])
     {
         _label = value;
         self.labelLabel.text = _label;
+        [[self.tableView cellForRowAtIndexPath:kLabelCellIndex] setNeedsLayout];
     }
 }
 
