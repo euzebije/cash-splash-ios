@@ -57,6 +57,7 @@
 		816F02B5190BACE80048272F /* CSSpendingModelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 816F02B4190BACE80048272F /* CSSpendingModelDataSource.m */; };
 		8178B109190E3B9F009570B5 /* CSSplitMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8178B108190E3B9F009570B5 /* CSSplitMenuTableViewController.m */; };
 		81B87750190DA5BD00689032 /* Storyboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B8774F190DA5BD00689032 /* Storyboard-iPad.storyboard */; };
+		81C87159190EDD5D0026EC72 /* CSSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C87158190EDD5D0026EC72 /* CSSplitViewController.m */; };
 		81CD0F77190A501E003D21E2 /* CSInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CD0F76190A501E003D21E2 /* CSInfoView.m */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,8 @@
 		8178B107190E3B9F009570B5 /* CSSplitMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSplitMenuTableViewController.h; path = UI/Controller/CSSplitMenuTableViewController.h; sourceTree = "<group>"; };
 		8178B108190E3B9F009570B5 /* CSSplitMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSplitMenuTableViewController.m; path = UI/Controller/CSSplitMenuTableViewController.m; sourceTree = "<group>"; };
 		81B8774F190DA5BD00689032 /* Storyboard-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Storyboard-iPad.storyboard"; path = "UI/Storyboard-iPad.storyboard"; sourceTree = "<group>"; };
+		81C87157190EDD5D0026EC72 /* CSSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSSplitViewController.h; path = UI/Controller/CSSplitViewController.h; sourceTree = "<group>"; };
+		81C87158190EDD5D0026EC72 /* CSSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSplitViewController.m; path = UI/Controller/CSSplitViewController.m; sourceTree = "<group>"; };
 		81CD0F75190A501E003D21E2 /* CSInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSInfoView.h; path = UI/Component/CSInfoView.h; sourceTree = "<group>"; };
 		81CD0F76190A501E003D21E2 /* CSInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSInfoView.m; path = UI/Component/CSInfoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -305,6 +308,8 @@
 				814F5E16190BFC28004750EF /* CSSettingsTableViewController.m */,
 				8178B107190E3B9F009570B5 /* CSSplitMenuTableViewController.h */,
 				8178B108190E3B9F009570B5 /* CSSplitMenuTableViewController.m */,
+				81C87157190EDD5D0026EC72 /* CSSplitViewController.h */,
+				81C87158190EDD5D0026EC72 /* CSSplitViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -543,6 +548,7 @@
 				812C44161907B14C00FAF848 /* CSSQLiteCategoryRepository.m in Sources */,
 				812C43FF19079EA000FAF848 /* CSSpendingModelRepository.m in Sources */,
 				812C44191907B18000FAF848 /* CSSQLiteLabelRepository.m in Sources */,
+				81C87159190EDD5D0026EC72 /* CSSplitViewController.m in Sources */,
 				8106C6BE18D47E2F00963219 /* main.m in Sources */,
 				81476A1E190CFC3B00CD7B0A /* CSDropboxCategoryRepository.m in Sources */,
 				814F5DEF190BF2E8004750EF /* CSSettingsManager.m in Sources */,
