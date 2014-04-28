@@ -18,6 +18,8 @@
 - (BOOL)save:(id)item;
 - (BOOL)remove:(id)item;
 
+- (void)refresh;
+
 @end
 
 @protocol CSTablePickerDelegate <NSObject>

@@ -14,6 +14,22 @@
 
 @implementation CSSplitMenuTableViewController
 
+#pragma mark - Lifecycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self performSegueWithIdentifier:@"paymentSegue" sender:self];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionNone];
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

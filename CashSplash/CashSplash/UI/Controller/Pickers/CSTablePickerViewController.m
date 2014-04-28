@@ -23,6 +23,11 @@
     {
         self.navigationItem.rightBarButtonItem = nil;
     }
+    
+    UIRefreshControl *refresh = [[UIRefreshControl alloc] init];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh"];
+    [refresh addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refresh;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -33,6 +38,13 @@
     {
         [self.delegate tablePicker:self didPickValue:self.selected];
     }
+}
+
+- (void)refresh
+{
+    [_dataSource refresh];
+    [self.tableView reloadData];
+    [self.refreshControl endRefreshing];
 }
 
 #pragma mark - Table view data source

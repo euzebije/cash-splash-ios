@@ -77,4 +77,9 @@
     return NO;
 }
 
+- (void)refresh
+{
+    _items = [NSMutableArray arrayWithArray:[_repository getAll]];
+}
+
 @end
