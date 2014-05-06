@@ -412,7 +412,13 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Date" id="1WP-mw-cFH"/>
+                    <navigationItem key="navigationItem" title="Date" id="1WP-mw-cFH">
+                        <barButtonItem key="rightBarButtonItem" title="Now" id="W8o-mF-HqZ">
+                            <connections>
+                                <action selector="nowTapped:" destination="vl4-Fy-wzH" id="97Z-43-mVb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="datePicker" destination="cqG-k9-Hej" id="Dhh-Yv-u3b"/>

@@ -10,6 +10,8 @@
 
 @implementation CSDatePickerViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -29,7 +31,14 @@
 
 - (CGSize)preferredContentSize
 {
-    return CGSizeMake(480, 216);
+    return CGSizeMake(480, 256);
+}
+
+#pragma mark - Actions
+
+- (IBAction)nowTapped:(id)sender
+{
+    self.datePicker.date = [NSDate date];
 }
 
 @end

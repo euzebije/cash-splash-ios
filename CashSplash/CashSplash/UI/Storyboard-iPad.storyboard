@@ -233,11 +233,11 @@
                         <viewControllerLayoutGuide type="bottom" id="qdw-I9-1Td"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="elR-Cm-iw2">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="216"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="256"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iaV-13-f4L">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="216"/>
+                                <rect key="frame" x="0.0" y="40" width="480" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="420402956.79143798">
                                     <!--2014-04-28 18:35:56 +0000-->
@@ -264,17 +264,33 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
 </data>
                                 </timeZone>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tP3-Hc-bfU">
+                                <rect key="frame" x="414" y="10" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="0HH-3d-9d3"/>
+                                    <constraint firstAttribute="height" constant="30" id="wWz-MD-ccY"/>
+                                </constraints>
+                                <state key="normal" title="Now">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nowTapped:" destination="XRr-br-Qhe" eventType="touchUpInside" id="eGg-YI-z7U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iaV-13-f4L" firstAttribute="leading" secondItem="elR-Cm-iw2" secondAttribute="leading" id="4Vz-U6-tDi"/>
-                            <constraint firstItem="iaV-13-f4L" firstAttribute="top" secondItem="elR-Cm-iw2" secondAttribute="top" id="9KS-kz-CG2"/>
-                            <constraint firstItem="qdw-I9-1Td" firstAttribute="top" secondItem="iaV-13-f4L" secondAttribute="bottom" id="Aat-CI-5I3"/>
-                            <constraint firstAttribute="trailing" secondItem="iaV-13-f4L" secondAttribute="trailing" id="WcK-gb-FvI"/>
+                            <constraint firstItem="tP3-Hc-bfU" firstAttribute="top" secondItem="elR-Cm-iw2" secondAttribute="top" constant="10" id="GoZ-gd-2xq"/>
+                            <constraint firstItem="iaV-13-f4L" firstAttribute="top" secondItem="tP3-Hc-bfU" secondAttribute="bottom" id="M4H-qH-0o0"/>
+                            <constraint firstItem="iaV-13-f4L" firstAttribute="leading" secondItem="elR-Cm-iw2" secondAttribute="leading" id="UkF-sp-VLn"/>
+                            <constraint firstAttribute="trailing" secondItem="tP3-Hc-bfU" secondAttribute="trailing" constant="20" id="ZIW-Bm-7zB"/>
+                            <constraint firstAttribute="trailing" secondItem="iaV-13-f4L" secondAttribute="trailing" id="f0O-TS-fUf"/>
+                            <constraint firstItem="qdw-I9-1Td" firstAttribute="top" secondItem="iaV-13-f4L" secondAttribute="bottom" id="lTL-sB-xnq"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="480" height="216"/>
+                    <size key="freeformSize" width="480" height="256"/>
                     <connections>
                         <outlet property="datePicker" destination="iaV-13-f4L" id="Z9Q-iV-DNu"/>
                     </connections>
