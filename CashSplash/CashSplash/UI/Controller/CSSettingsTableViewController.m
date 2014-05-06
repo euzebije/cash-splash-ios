@@ -12,7 +12,15 @@
 #import "CSSettingsManager.h"
 #import "CSDataManager.h"
 
+#import "CSTablePickerViewController.h"
+#import "CSDataDisplayDaysDataSource.h"
+
+#define kDataDaysPickerIdentifier   @"DataDaysPicker"
+
 @implementation CSSettingsTableViewController
+{
+    CSDataDisplayDaysDataSource *dataDaysDataSource;
+}
 
 - (void)viewDidLoad
 {
@@ -25,6 +33,9 @@
         [self.useDropboxSwitch setOn:account.linked];
         [self.tableView reloadData];
     }];
+    
+    dataDaysDataSource = [[CSDataDisplayDaysDataSource alloc] init];
+    self.dataDisplayDaysLabel.text = [dataDaysDataSource displayForValue:settings.dataDisplayDays];
     
     self.versionLabel.text = settings.appVersion;
 }
@@ -62,6 +73,22 @@
     }
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"dataDisplayLastSegue"])
+    {
+        CSTablePickerViewController *pickerController = segue.destinationViewController;
+        pickerController.delegate = self;
+        pickerController.dataSource = dataDaysDataSource;
+        pickerController.selected = [NSNumber numberWithInt:[CSSettingsManager sharedManager].dataDisplayDays];
+        pickerController.identifier = kDataDaysPickerIdentifier;
+        pickerController.canAddItems = NO;
+        pickerController.canDeselect = NO;
+    }
+}
+
 #pragma mark - Table view data source
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
@@ -80,6 +107,28 @@
     }
     
     return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - CSTablePickerDelegate
+
+- (void)tablePicker:(CSTablePickerViewController *)tablePicker didPickValue:(id)value
+{
+    int intValue = [value intValue];
+    self.dataDisplayDaysLabel.text = [dataDaysDataSource displayForValue:intValue];
+    
+    CSSettingsManager *settings = [CSSettingsManager sharedManager];
+    settings.dataDisplayDays = intValue;
+    [settings sync];
+}
+
+- (NSString *)tablePicker:(CSTablePickerViewController *)tablePicker displayForItem:(id)item
+{
+    return [dataDaysDataSource displayForValue:[item intValue]];
 }
 
 @end

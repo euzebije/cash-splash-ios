@@ -161,6 +161,7 @@
         categoryPickerController.selected = _category;
         categoryPickerController.identifier = kCategoryIdentifier;
         categoryPickerController.canAddItems = YES;
+        categoryPickerController.canDeselect = YES;
     }
     else if ([segue.identifier isEqualToString:@"pickLabelSegue"])
     {
@@ -170,6 +171,7 @@
         labelPickerController.selected = _label;
         labelPickerController.identifier = kLabelIdentifier;
         labelPickerController.canAddItems = YES;
+        labelPickerController.canDeselect = YES;
     }
 }
 

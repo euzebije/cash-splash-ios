@@ -59,6 +59,7 @@
 		81B87750190DA5BD00689032 /* Storyboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B8774F190DA5BD00689032 /* Storyboard-iPad.storyboard */; };
 		81C87159190EDD5D0026EC72 /* CSSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C87158190EDD5D0026EC72 /* CSSplitViewController.m */; };
 		81CD0F77190A501E003D21E2 /* CSInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81CD0F76190A501E003D21E2 /* CSInfoView.m */; };
+		81D9B6D41918FD48002B7831 /* CSDataDisplayDaysDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D9B6D31918FD48002B7831 /* CSDataDisplayDaysDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,8 @@
 		81C87158190EDD5D0026EC72 /* CSSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSSplitViewController.m; path = UI/Controller/CSSplitViewController.m; sourceTree = "<group>"; };
 		81CD0F75190A501E003D21E2 /* CSInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSInfoView.h; path = UI/Component/CSInfoView.h; sourceTree = "<group>"; };
 		81CD0F76190A501E003D21E2 /* CSInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSInfoView.m; path = UI/Component/CSInfoView.m; sourceTree = "<group>"; };
+		81D9B6D21918FD48002B7831 /* CSDataDisplayDaysDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSDataDisplayDaysDataSource.h; path = UI/DataSource/CSDataDisplayDaysDataSource.h; sourceTree = "<group>"; };
+		81D9B6D31918FD48002B7831 /* CSDataDisplayDaysDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSDataDisplayDaysDataSource.m; path = UI/DataSource/CSDataDisplayDaysDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +281,7 @@
 			children = (
 				81CD0F74190A4F4A003D21E2 /* Component */,
 				8106C6E918D488EF00963219 /* Controller */,
+				81D9B6D11918FCDA002B7831 /* DataSource */,
 				8106C6E418D47F3100963219 /* Storyboard-iPhone.storyboard */,
 				81B8774F190DA5BD00689032 /* Storyboard-iPad.storyboard */,
 			);
@@ -427,6 +431,15 @@
 			name = Component;
 			sourceTree = "<group>";
 		};
+		81D9B6D11918FCDA002B7831 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				81D9B6D21918FD48002B7831 /* CSDataDisplayDaysDataSource.h */,
+				81D9B6D31918FD48002B7831 /* CSDataDisplayDaysDataSource.m */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -540,6 +553,7 @@
 				8106C6C218D47E2F00963219 /* CSAppDelegate.m in Sources */,
 				8178B109190E3B9F009570B5 /* CSSplitMenuTableViewController.m in Sources */,
 				812C44081907A11F00FAF848 /* CSSQLiteRepositoryFactory.m in Sources */,
+				81D9B6D41918FD48002B7831 /* CSDataDisplayDaysDataSource.m in Sources */,
 				815DE2E01909017F0018F577 /* CSCategoryDataSource.m in Sources */,
 				814F5E17190BFC28004750EF /* CSSettingsTableViewController.m in Sources */,
 				815DE2E61909067C0018F577 /* CSLabelDataSource.m in Sources */,

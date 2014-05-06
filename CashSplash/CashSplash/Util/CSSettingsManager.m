@@ -12,6 +12,7 @@
 #define kDropboxAppSecret   @"dropbox_app_secret"
 
 #define kUseDropbox         @"use_dropbox"
+#define kDataDisplayDays    @"data_display_days"
 
 @implementation CSSettingsManager
 
@@ -44,8 +45,19 @@
         _dropBoxAppKey = [settings objectForKey:kDropboxAppKey];
         _dropBoxAppSecret = [settings objectForKey:kDropboxAppSecret];
         
+        // User settings
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        
         self.useDropbox = [defaults boolForKey:kUseDropbox];
+        
+        self.dataDisplayDays = (int)[defaults integerForKey:kDataDisplayDays];
+        if (self.dataDisplayDays == 0)
+        {
+            self.dataDisplayDays = 14;
+            [defaults setInteger:14 forKey:kDataDisplayDays];
+        }
+        
+        [defaults synchronize];
     }
     return self;
 }
@@ -57,6 +69,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     [defaults setBool:self.useDropbox forKey:kUseDropbox];
+    [defaults setInteger:self.dataDisplayDays forKey:kDataDisplayDays];
     
     [defaults synchronize];
 }

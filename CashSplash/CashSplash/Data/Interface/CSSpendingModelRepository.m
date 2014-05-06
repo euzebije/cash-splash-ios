@@ -33,6 +33,12 @@
     return [NSArray arrayWithArray:_storage];
 }
 
+- (NSArray *)getAllFromDate:(NSDate *)date
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"timestamp >= %@", date];
+    return [_storage filteredArrayUsingPredicate:predicate];
+}
+
 - (CSSpendingModel *)get:(NSString *)key
 {
     for (CSSpendingModel *model in _storage)

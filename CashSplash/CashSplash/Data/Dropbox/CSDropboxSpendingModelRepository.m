@@ -61,6 +61,34 @@
     return nil;
 }
 
+- (NSArray *)getAllFromDate:(NSDate *)date
+{
+    if (_table)
+    {
+        [CSDropboxManager syncDatastore:_datastore];
+        DBError *error = nil;
+        NSArray *data = [_table query:nil error:&error];
+        
+        if (error)
+        {
+            NSLog(@"[Dropbox] Spending model getAll error: %@", error);
+            return nil;
+        }
+        
+        NSMutableArray *items = [[NSMutableArray alloc] init];
+        for (DBRecord *item in data)
+        {
+            CSSpendingModel *model = [self modelFromDBRecord:item];
+            if (model.timestamp >= date)
+            {
+                [items addObject:model];
+            }
+        }
+        return items;
+    }
+    return nil;
+}
+
 - (CSSpendingModel *)get:(NSString *)key
 {
     if (_table)

@@ -36,6 +36,7 @@
 
 @property (nonatomic, assign) BOOL canAddItems;
 @property (nonatomic, assign) BOOL disablePicking;
+@property (nonatomic, assign) BOOL canDeselect;
 
 @property (nonatomic, retain) id<CSTablePickerDatasource> dataSource;
 @property (nonatomic, assign) id<CSTablePickerDelegate> delegate;

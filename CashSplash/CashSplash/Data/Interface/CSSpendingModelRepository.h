@@ -15,6 +15,7 @@
 - (instancetype)init;
 
 - (NSArray *)getAll;
+- (NSArray *)getAllFromDate:(NSDate *)date;
 - (CSSpendingModel *)get:(NSString *)key;
 
 - (BOOL)save:(CSSpendingModel *)model;

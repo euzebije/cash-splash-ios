@@ -8,13 +8,6 @@
 
 #import "CSSpendingModel.h"
 
-#define kKeyKey         @"Id"
-#define kAmountKey      @"Amount"
-#define kCategoryKey    @"Category"
-#define kLabelKey       @"Label"
-#define kTimestampKey   @"Timestamp"
-#define kNoteKey        @"Note"
-
 @implementation CSSpendingModel
 
 static NSNumberFormatter *currencyFormatter;
