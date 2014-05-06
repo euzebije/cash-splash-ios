@@ -19,4 +19,7 @@
 
 - (instancetype)init;
 
+- (NSString *)formattedAmount;
+- (NSString *)formattedDescription;
+
 @end

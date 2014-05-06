@@ -17,6 +17,10 @@
 
 @implementation CSSpendingModel
 
+static NSNumberFormatter *currencyFormatter;
+
+#pragma mark - Init
+
 - (instancetype)init
 {
     self = [super init];
@@ -24,6 +28,39 @@
         self.key = [[NSUUID UUID] UUIDString];
     }
     return self;
+}
+
+#pragma mark - Public methods
+
+- (NSString *)formattedAmount
+{
+    if (currencyFormatter == nil)
+    {
+        currencyFormatter = [[NSNumberFormatter alloc] init];
+        currencyFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
+    }
+    return [currencyFormatter stringFromNumber:[NSNumber numberWithDouble:self.amount]];
+}
+
+- (NSString *)formattedDescription
+{
+    BOOL hasCategory = [self.category length] > 0;
+    BOOL hasLabel = [self.label length] > 0;
+    
+    if (hasCategory && hasLabel)
+    {
+        return [NSString stringWithFormat:@"%@, %@", self.category, self.label];
+    }
+    else if (hasCategory)
+    {
+        return self.category;
+    }
+    else if (hasLabel)
+    {
+        return self.label;
+    }
+    
+    return nil;
 }
 
 @end

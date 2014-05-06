@@ -55,12 +55,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"itemCell" forIndexPath:indexPath];
     
     CSSpendingModel *model = [[_dataSource items] objectAtIndex:indexPath.row];
-    NSNumberFormatter *currencyFormatter = [[NSNumberFormatter alloc] init];
-    currencyFormatter.numberStyle = NSNumberFormatterCurrencyStyle;
     
-    NSString *text = [NSString stringWithFormat:@"%@ (%@, %@)", [currencyFormatter stringFromNumber:[NSNumber numberWithDouble:model.amount]], model.category, model.label];
-    
-    cell.textLabel.text = text;
+    cell.textLabel.text = [model formattedAmount];
+    cell.detailTextLabel.text = [model formattedDescription];
     
     return cell;
 }
