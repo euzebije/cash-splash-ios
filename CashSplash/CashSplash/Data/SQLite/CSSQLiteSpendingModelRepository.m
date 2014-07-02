@@ -10,7 +10,7 @@
 #import "CSSpendingModel.h"
 
 #define kQueryGetAll            @"SELECT key, amount, category, label, timestamp, note FROM spending_model"
-#define kQueryGetAllDateFilter  @"SELECT key, amount, category, label, timestamp, note FROM spending_model WHERE timestamp >= ?"
+#define kQueryGetAllDateFilter  @"SELECT key, amount, category, label, timestamp, note FROM spending_model WHERE timestamp >= ? ORDER BY timestamp DESC"
 #define kQueryGet               @"SELECT key, amount, category, label, timestamp, note FROM spending_model WHERE key = ?"
 #define kQuerySave              @"INSERT INTO spending_model (key, amount, category, label, timestamp, note) VALUES (?, ?, ?, ?, ?, ?)"
 #define kQueryRemove            @"DELETE FROM spending_model WHERE key = ?"

@@ -31,7 +31,7 @@
 
 @interface CSTablePickerViewController : UITableViewController <CSNewItemDelegate>
 
-@property (nonatomic, assign) id selected;
+@property (nonatomic, retain) id selected;
 @property (nonatomic, copy) NSString *identifier;
 
 @property (nonatomic, assign) BOOL canAddItems;

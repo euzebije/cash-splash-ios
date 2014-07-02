@@ -68,7 +68,9 @@
     NSString *text = [self.delegate tablePicker:self displayForItem:item];
     cell.textLabel.text = text;
     
-    if (self.selected == item || ([self.selected respondsToSelector:@selector(isEqualToString:)] && [self.selected isEqualToString:item]))
+    if (self.selected == item ||
+        ([self.selected respondsToSelector:@selector(isEqualToString:)] && [self.selected isEqualToString:item]) ||
+        ([self.selected respondsToSelector:@selector(isEqualToNumber:)] && [self.selected isEqualToNumber:item]))
     {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         _selectedCell = cell;

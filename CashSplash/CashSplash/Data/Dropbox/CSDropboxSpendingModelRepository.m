@@ -79,11 +79,23 @@
         for (DBRecord *item in data)
         {
             CSSpendingModel *model = [self modelFromDBRecord:item];
-            if (model.timestamp >= date)
+            if ([model.timestamp compare:date] == NSOrderedDescending)
             {
                 [items addObject:model];
             }
         }
+        [items sortUsingComparator:^NSComparisonResult(CSSpendingModel *obj1, CSSpendingModel *obj2) {
+            NSComparisonResult result = [obj1.timestamp compare:obj2.timestamp];
+            switch (result) {
+                case NSOrderedDescending:
+                    return NSOrderedAscending;
+                case NSOrderedAscending:
+                    return NSOrderedDescending;
+                default:
+                    return NSOrderedSame;
+            }
+        }];
+        
         return items;
     }
     return nil;

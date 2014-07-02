@@ -8,6 +8,7 @@
 
 #import "CSSpendingModelDataSource.h"
 
+#import "CSSettingsManager.h"
 #import "CSDataManager.h"
 #import "CSRepositoryFactory.h"
 #import "CSSpendingModelRepository.h"
@@ -36,7 +37,7 @@
 {
     CSRepositoryFactory *factory = [[CSDataManager sharedManager] repositoryFactory];
     _repository = [factory createSpendingModelRepository];
-    _items = [NSMutableArray arrayWithArray:[_repository getAll]];
+    [self refresh];
 }
 
 #pragma mark - Public methods
@@ -93,7 +94,11 @@
 
 - (void)refresh
 {
-    _items = [NSMutableArray arrayWithArray:[_repository getAll]];
+    int daysToDisplay = [CSSettingsManager sharedManager].dataDisplayDays;
+    NSTimeInterval secondsToDisplay = -daysToDisplay * 24 * 60 * 60;
+    NSDate *loadDate = [NSDate dateWithTimeIntervalSinceNow:secondsToDisplay];
+    
+    _items = [NSMutableArray arrayWithArray:[_repository getAllFromDate:loadDate]];
 }
 
 @end
