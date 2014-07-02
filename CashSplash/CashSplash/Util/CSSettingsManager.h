@@ -22,5 +22,6 @@
 @property (nonatomic, readonly) NSString *dropBoxAppSecret;
 
 @property (nonatomic, assign) BOOL useDropbox;
+@property (nonatomic, assign) int dataDisplayDays;
 
 @end

@@ -29,11 +29,6 @@
     }
 }
 
-- (CGSize)preferredContentSize
-{
-    return CGSizeMake(480, 256);
-}
-
 #pragma mark - Actions
 
 - (IBAction)nowTapped:(id)sender

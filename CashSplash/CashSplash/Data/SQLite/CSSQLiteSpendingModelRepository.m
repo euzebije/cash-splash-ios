@@ -9,10 +9,11 @@
 #import "CSSQLiteSpendingModelRepository.h"
 #import "CSSpendingModel.h"
 
-#define kQueryGetAll    @"SELECT key, amount, category, label, timestamp, note FROM spending_model"
-#define kQueryGet       @"SELECT key, amount, category, label, timestamp, note FROM spending_model WHERE key = ?"
-#define kQuerySave      @"INSERT INTO spending_model (key, amount, category, label, timestamp, note) VALUES (?, ?, ?, ?, ?, ?)"
-#define kQueryRemove    @"DELETE FROM spending_model WHERE key = ?"
+#define kQueryGetAll            @"SELECT key, amount, category, label, timestamp, note FROM spending_model"
+#define kQueryGetAllDateFilter  @"SELECT key, amount, category, label, timestamp, note FROM spending_model WHERE timestamp >= ? ORDER BY timestamp DESC"
+#define kQueryGet               @"SELECT key, amount, category, label, timestamp, note FROM spending_model WHERE key = ?"
+#define kQuerySave              @"INSERT INTO spending_model (key, amount, category, label, timestamp, note) VALUES (?, ?, ?, ?, ?, ?)"
+#define kQueryRemove            @"DELETE FROM spending_model WHERE key = ?"
 
 @implementation CSSQLiteSpendingModelRepository
 {
@@ -39,6 +40,22 @@
     sqlite3_stmt *statement;
     if (sqlite3_prepare_v2(_database, [kQueryGetAll UTF8String], -1, &statement, NULL) == SQLITE_OK)
     {
+        while (sqlite3_step(statement) == SQLITE_ROW)
+        {
+            [items addObject:[self modelFromStatement:statement]];
+        }
+        sqlite3_finalize(statement);
+    }
+    return items;
+}
+
+- (NSArray *)getAllFromDate:(NSDate *)date
+{
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    sqlite3_stmt *statement;
+    if (sqlite3_prepare_v2(_database, [kQueryGetAllDateFilter UTF8String], -1, &statement, NULL) == SQLITE_OK)
+    {
+        sqlite3_bind_int(statement, 1, (int)floor([date timeIntervalSince1970]));
         while (sqlite3_step(statement) == SQLITE_ROW)
         {
             [items addObject:[self modelFromStatement:statement]];

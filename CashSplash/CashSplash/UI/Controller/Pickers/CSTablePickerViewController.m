@@ -40,11 +40,6 @@
     }
 }
 
-- (CGSize)preferredContentSize
-{
-    return CGSizeMake(300, 300);
-}
-
 - (void)refresh
 {
     [_dataSource refresh];
@@ -73,7 +68,9 @@
     NSString *text = [self.delegate tablePicker:self displayForItem:item];
     cell.textLabel.text = text;
     
-    if (self.selected == item || [self.selected isEqualToString:item])
+    if (self.selected == item ||
+        ([self.selected respondsToSelector:@selector(isEqualToString:)] && [self.selected isEqualToString:item]) ||
+        ([self.selected respondsToSelector:@selector(isEqualToNumber:)] && [self.selected isEqualToNumber:item]))
     {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
         _selectedCell = cell;
@@ -113,7 +110,7 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
-    if (_selectedCell == selectedCell)
+    if (_selectedCell == selectedCell && self.canDeselect)
     {
         // Tapped current selection, deselect it
         _selectedCell.accessoryType = UITableViewCellAccessoryNone;
